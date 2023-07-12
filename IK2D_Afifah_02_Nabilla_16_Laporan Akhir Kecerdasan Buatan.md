@@ -68,44 +68,37 @@ Solusi yang diajukan untuk menyelesaikan masalah yang telah diuraikan adalah seb
 
 ## Data Understanding
 
-Dataset yang digunakan pada proyek ini diperoleh dari Kaggle. Silahkan kunjungi tautan berikut [Mobile Phone Specifications and Prices](https://www.kaggle.com/datasets/pratikgarai/mobile-phone-specifications-and-prices) untuk mengakses dataset yang dipakai. Adapun variabel-variabel yang terdapat pada dataset adalah sebagai berikut :
+Dataset yang digunakan pada proyek ini diperoleh dari Kaggle. Silahkan kunjungi tautan berikut [Luxury-Watch_Prices](https://www.kaggle.com/datasets/rkiattisak/luxury-watches-price-dataset) untuk mengakses dataset yang dipakai. Adapun variabel-variabel yang terdapat pada dataset adalah sebagai berikut :
 
-1. **Name**: Nama *Smarphone*
-2. **Brand**: Nama Brand
-3. **Model**: Model *Smarphone*
-4. **Battery capacity (mAh)**: Kapasitas Baterai dalam mAh
-5. **Screen size (inches)**: Ukuran layar dalam Inchi
-6. **Touchscreen**: Informasi apakah *Smarphone* ada Touchscreen atau tidak
-7. **Resolution x**: Resolusi lebar layar dari *Smarphone*
-8. **Resolution y**: Resolusi panjang layar dari *Smarphone*
-9. **Processor**: Jumlah core dari Prosesor
-10. **RAM (MB)**: Jumlah RAM dari  *Smarphone* dalam MB
-11. **Internal storage**: Kapasitas memori internal dalam GB
-12. **Rear camera**: Resolusi kamera belakang dalam MP (0 jika tidak ada kamera belakang)
-13. **Front camera**: Resolusi kamera depan dalam MP (0 jika tidak ada kamera belakang)
-14. **Operation system**: OS yang digunakan pada *Smarphone*
-15. **Wi-Fi**: Ketersediaan Wi-Fi dari *Smarphone*
-16. **Bluetooth**: Ketersediaan Bluetooth dari *Smarphone*
-17. **GPS**: Ketersediaan GPS dari *Smarphone*
-18. **Number of SIMs**: Jumlah slot SIM card *Smarphone*
-19. **3G**: Ketersediaan 3G dari *Smarphone*
-20. **4G/LTE**: Ketersediaan 4G/LTE dari *Smarphone*
-21. **Price:** Harga *Smarphone* dalam mata uang india (INR)
+1. **Brand**: Merk Jam Tangan
+2. **Model**: Model Jam Tangan
+3. **Case Material**: Material (Bahan) yang digunakan pada Case Jam Tangan
+4. **Strap Material**: Material atau bahan yang digunakan pada Pergelangan (Strap) Jam Tangan
+5. **Movement Type**: Jenis Mekanisme Pada Jam Tangan
+6. **Water Resistance**: kemampuan tahan jam tangan terhadap tekanan air pada kedalaman tertentu
+7. **Case Diameter (mm)**: panjang Diameter Jam dalam mm (milimeter)
+8. **Case Thickness (mm)**: Ketebalan case jam tangan dalam mm (milimeter)
+9. **Band Width (mm)**: lebar tali jam dalam mm (milimeter)
+10. **Dial Color**: Warna penanda pada jam
+11. **Crystal Material**: bahan yang digunakan untuk menutupi dial
+12. **Complications**: fitur atau fungsi tambahan
+13. **Power Reserve**: lama jam tangan dapat berfungsi
+14. **Price (USD)**: Harga jam tangan dalam USD
 
-Pada dataset, terdapat 12 fitur numerikal dan 9 fitur kategorikal. Ringkasan statistik dari data-data numerikal dapat dilihat pada Tabel 1.
+Pada dataset, terdapat 4 fitur numerikal dan 10 fitur kategorikal. Ringkasan statistik dari data-data numerikal dapat dilihat pada Tabel 1.
 
 <div style="text-align:center">Tabel 1. Ringkasan Statistik Data-Data Numerikal Pada Dataset</div>
 
-|       | Unnamed: 0  | Battery capacity (mAh) | Screen size (inches) | Resolution x | Resolution y | Processor   | RAM (MB)     | Internal storage (GB) | Rear camera | Front camera | Number of SIMs | Price         |
-| ----- | ----------- | ---------------------- | -------------------- | ------------ | ------------ | ----------- | ------------ | --------------------- | ----------- | ------------ | -------------- | ------------- |
-| count | 1359.000000 | 1359.000000            | 1359.000000          | 1359.000000  | 1359.000000  | 1359.000000 | 1359.000000  | 1359.000000           | 1359.000000 | 1359.000000  | 1359.000000    | 1359.000000   |
-| mean  | 679.000000  | 2938.489330            | 5.291310             | 811.543046   | 1490.777778  | 5.551141    | 2488.777778  | 30.654864             | 12.070199   | 7.037969     | 1.833701       | 11465.825607  |
-| std   | 392.453819  | 873.514133             | 0.671357             | 270.707271   | 557.780120   | 2.196562    | 1664.440386  | 36.950241             | 8.948337    | 6.295448     | 0.374457       | 13857.497077  |
-| min   | 0.000000    | 1010.000000            | 2.400000             | 240.000000   | 320.000000   | 1.000000    | 64.000000    | 0.064000              | 0.000000    | 0.000000     | 1.000000       | 494.000000    |
-| 25%   | 339.500000  | 2300.000000            | 5.000000             | 720.000000   | 1280.000000  | 4.000000    | 1000.000000  | 8.000000              | 8.000000    | 2.000000     | 2.000000       | 4763.500000   |
-| 50%   | 679.000000  | 3000.000000            | 5.200000             | 720.000000   | 1280.000000  | 4.000000    | 2000.000000  | 16.000000             | 12.200000   | 5.000000     | 2.000000       | 6999.000000   |
-| 75%   | 1018.500000 | 3500.000000            | 5.700000             | 1080.000000  | 1920.000000  | 8.000000    | 3000.000000  | 32.000000             | 13.000000   | 8.000000     | 2.000000       | 11999.000000  |
-| max   | 1358.000000 | 6000.000000            | 7.300000             | 2160.000000  | 3840.000000  | 10.000000   | 12000.000000 | 512.000000            | 108.000000  | 48.000000    | 3.000000       | 174990.000000 |
+|       | **Case Diameter (mm)** | **Case Thickness (mm)** | **Band Width (mm)** | **Price (USD)** |
+| ----- | ---------------------- | ----------------------- | ------------------- | --------------- |
+| count | 507.00                 | 507.00                  | 507.00              | 506.00          |
+| mean  | 41.05                  | 11.59                   | 21.11               | 12082.96        |
+| std   | 2.54                   | 2.49                    | 1.66                | 10419.82        |
+| min   | 27.50                  | 5.00                    | 15.00               | 495.00          |
+| 25%   | 40.00                  | 9.80                    | 20.00               | 5500.00         |
+| 50%   | 41.00                  | 12.00                   | 20.00               | 8350.00         |
+| 75%   | 42.00                  | 13.30                   | 22.00               | 16450.00        |
+| max   | 46.50                  | 17.50                   | 28.00               | 70000.00        |
 
 Pada tahap *Data Understanding* dilakukan analisis data eksploratif untuk mendapatkan wawasan tentang karakteristik data, memahami struktur data, dan mengidentifikasi potensi masalah atau kesalahan yang mungkin terjadi. Kegiatan Data Understanding yang dilakukan pada Proyek ini antara lain :
 
@@ -115,7 +108,7 @@ Pada tahap *Data Understanding* dilakukan analisis data eksploratif untuk mendap
 
 - Melakukan visualisasi data untuk mengetahui korelasi dan sebaran data. Visualisasi korelasi antar kolom digambarkan dalam heatmap seperti ditunjukan Gambar 1. Berdasarkan diagaram heatmap Gambar 1 diketahui bahawa terdapat beberapa kolom seperti Battery, Processor, RAM, dll yang berkorelasi dengan kolom 'Prize'.  Semakin mendekati nilai 1 maka korelasi semakin tinggi. Kemudian hasil visualisasi heatmap hanya menampilkan korelasi pada kolom yang memberikan data numerikal, sedangkan kolom yang memberikan hasil kategorikal tidak dapat diketahui korelasinya.
 
-  <img src="https://afandistudio.net/prak_ai/korelasi.png" style="zoom:67%;" />
+  <img src="https://i.postimg.cc/YqKJwbJq/tabel-korelasi.png" style="zoom:67%;" />
   
   <div style="text-align:center">Gambar 1. Visualisasi Korelasi Data dengan Heatmap</div>
   
