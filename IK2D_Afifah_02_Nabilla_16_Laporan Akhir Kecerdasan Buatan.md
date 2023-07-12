@@ -92,13 +92,13 @@ Pada tahap *Data Understanding* dilakukan analisis data eksploratif untuk mendap
 
 - Melakukan visualisasi data untuk mengetahui korelasi dan sebaran data. Visualisasi korelasi antar kolom digambarkan dalam heatmap seperti ditunjukan Gambar 1. Berdasarkan diagaram heatmap Gambar 1 diketahui bahwa terdapat beberapa kolom seperti Water Resistance, Case Diameter, Case Thickness, Band Width dan Power Reserve yang berkorelasi dengan kolom 'Price'.  Semakin mendekati nilai 1 maka korelasi semakin tinggi. Kemudian hasil visualisasi heatmap hanya menampilkan korelasi pada kolom yang memberikan data numerikal, sedangkan kolom yang memberikan hasil kategorikal tidak dapat diketahui korelasinya.
 
-  ![tabel-korelasi](C:\Users\User\Downloads\n\tabel-korelasi.png)
+  <img  src="https://github.com/afifahnaurak/Laporan-Akhir-Kecerdasan-Buatan/assets/116862851/9647c17c-0ad3-478c-b989-5bfe83d59acd" style="zoom:67%;" />
   
   <div style="text-align:center">Gambar 1. Visualisasi Korelasi Data dengan Heatmap</div>
   
   Sedangkan contoh visualisasi dari sebaran data ditunjukan pada Gambar 2. Visualisasi yang ditunjukan pada Gambar 2 menunjukan bahwa ada ketidakseimbangan data pada kolom Case Diameter, Case Thickness, Band Width, dan Power Reserve.
   
-  ![](https://afandistudio.net/prak_ai/sebaran_data_mlt1.png)
+  ![](https://github.com/afifahnaurak/Laporan-Akhir-Kecerdasan-Buatan/assets/116862851/a4e2538b-4c56-467c-b6d5-550b4e2fe983)
 
 <div style="text-align:center">Gambar 2. Visualisasi Data pada Dataset</div>
 
@@ -125,28 +125,50 @@ Pada tahap ini dilakukan proses pelatihan untuk mendapatkan model dengan perform
 
    <div style="text-align:center">Tabel 2. Hasil Perbandingan model menggunakan Lazy Predict</div>
 
-   | Model                         | Adjusted R-Squared | R-Squared | RMSE | Time Taken |
-   | ----------------------------- | ------------------ | --------- | ---- | ---------- |
-   | RandomForestRegressor         | 0.78               | 0.81      | 0.34 | 0.31       |
-   | ExtraTreeRegressor            | 0.78               | 0.81      | 0.34 | 0.04       |
-   | GradientBoostingRegressor     | 0.76               | 0.79      | 0.36 | 0.13       |
-   | BaggingRegressor              | 0.75               | 0.78      | 0.36 | 0.07       |
-   | XGBRegressor                  | 0.73               | 0.77      | 0.37 | 0.14       |
-   | HistGradientBoostingRegressor | 0.73               | 0.76      | 0.38 | 0.38       |
-   | ExtraTreesRegressor           | 0.72               | 0.76      | 0.38 | 0.24       |
-   | LGBMRegressor                 | 0.70               | 0.73      | 0.40 | 0.08       |
-   | AdaBoostRegressor             | 0.58               | 0.63      | 0.47 | 0.19       |
-   | DecisionTreeRegressor         | 0.55               | 0.61      | 0.48 | 0.03       |
-   | KNeighborsRegressor           | 0.46               | 0.53      | 0.53 | 0.03       |
-   | SVR                           | 0.32               | 0.41      | 0.59 | 0.05       |
-   | NuSVR                         | 0.32               | 0.40      | 0.60 | 0.06       |
-   | TransformedTargetRegressor    | 0.17               | 0.27      | 0.66 | 0.03       |
-   | LinearRegression              | 0.17               | 0.27      | 0.66 | 0.03       |
-   | RidgeCV                       | 0.17               | 0.27      | 0.66 | 0.03       |
-   | ElasticNetCV                  | 0.16               | 0.27      | 0.66 | 0.18       |
-   | Ridge                         | 0.16               | 0.27      | 0.66 | 0.03       |
-   | BayesianRidge                 | 0.15               | 0.26      | 0.66 | 0.09       |
-   | LassoCV                       | 0.15               | 0.26      | 0.66 | 0.13       |
+   | Model                         | Adjusted R-Squared          | R-Squared                   | RMSE            | Time Taken |
+   | ----------------------------- | --------------------------- | --------------------------- | --------------- | ---------- |
+   | RandomForestRegressor         | 0.78                        | 0.81                        | 0.34            | 0.31       |
+   | ExtraTreeRegressor            | 0.78                        | 0.81                        | 0.34            | 0.04       |
+   | GradientBoostingRegressor     | 0.76                        | 0.79                        | 0.36            | 0.13       |
+   | BaggingRegressor              | 0.75                        | 0.78                        | 0.36            | 0.07       |
+   | XGBRegressor                  | 0.73                        | 0.77                        | 0.37            | 0.14       |
+   | HistGradientBoostingRegressor | 0.73                        | 0.76                        | 0.38            | 0.38       |
+   | ExtraTreesRegressor           | 0.72                        | 0.76                        | 0.38            | 0.24       |
+   | LGBMRegressor                 | 0.70                        | 0.73                        | 0.40            | 0.08       |
+   | AdaBoostRegressor             | 0.58                        | 0.63                        | 0.47            | 0.19       |
+   | DecisionTreeRegressor         | 0.55                        | 0.61                        | 0.48            | 0.03       |
+   | KNeighborsRegressor           | 0.46                        | 0.53                        | 0.53            | 0.03       |
+   | SVR                           | 0.32                        | 0.41                        | 0.59            | 0.05       |
+   | NuSVR                         | 0.32                        | 0.40                        | 0.60            | 0.06       |
+   | TransformedTargetRegressor    | 0.17                        | 0.27                        | 0.66            | 0.03       |
+   | LinearRegression              | 0.17                        | 0.27                        | 0.66            | 0.03       |
+   | RidgeCV                       | 0.17                        | 0.27                        | 0.66            | 0.03       |
+   | ElasticNetCV                  | 0.16                        | 0.27                        | 0.66            | 0.18       |
+   | Ridge                         | 0.16                        | 0.27                        | 0.66            | 0.03       |
+   | BayesianRidge                 | 0.15                        | 0.26                        | 0.66            | 0.09       |
+   | LassoCV                       | 0.15                        | 0.26                        | 0.66            | 0.13       |
+   | LassoLarsIC                   | 0.15                        | 0.26                        | 0.66            | 0.04       |
+   | LassoLarsCV                   | 0.14                        | 0.25                        | 0.67            | 0.08       |
+   | PoissonRegressor              | 0.11                        | 0.22                        | 0.68            | 0.04       |
+   | LarsCV                        | 0.09                        | 0.20                        | 0.69            | 0.08       |
+   | HuberRegressor                | 0.07                        | 0.19                        | 0.69            | 0.08       |
+   | LinearSVR                     | 0.06                        | 0.18                        | 0.70            | 0.03       |
+   | OrthogonalMatchingPursuitCV   | -0.02                       | 0.11                        | 0.73            | 0.03       |
+   | GammaRegressor                | -0.02                       | 0.11                        | 0.73            | 0.04       |
+   | TweedieRegressor              | -0.02                       | 0.11                        | 0.73            | 0.02       |
+   | OrthogonalMatchingPursuit     | -0.05                       | 0.08                        | 0.74            | 0.03       |
+   | SGDRegressor                  | -0.06                       | 0.07                        | 0.74            | 0.03       |
+   | KernelRidge                   | -0.11                       | 0.03                        | 0.76            | 0.05       |
+   | QuantileRegressor             | -0.15                       | -0.00                       | 0.77            | 1.70       |
+   | DummyRegressor                | -0.15                       | -0.00                       | 0.77            | 0.03       |
+   | LassoLars                     | -0.15                       | -0.00                       | 0.77            | 0.03       |
+   | Lasso                         | -0.15                       | -0.00                       | 0.77            | 0.03       |
+   | ElasticNet                    | -0.15                       | -0.00                       | 0.77            | 0.03       |
+   | PassiveAggressiveRegressor    | -0.28                       | -0.12                       | 0.82            | 0.04       |
+   | MLPRegressor                  | -0.81                       | -0.58                       | 0.97            | 0.74       |
+   | RANSACRegressor               | -1.79                       | -1.43                       | 1.20            | 0.15       |
+   | GaussianProcessRegressor      | -10.05                      | -8.65                       | 2.39            | 0.07       |
+   | Lars                          | -42988557141202895372288.00 | -37539303419078584041472.00 | 149241999378.87 | 0.03       |
 
    Algoritma dengan performa terbaik dilihat dari nilai R-Square dan RMSE. Semakin besar nilai R-Square (mendekati 1) maka model semakin akurat. Sedangkan pada RMSE, apabila nilai semain kecil (mendekati 0), maka akurasi model akan semakin tinggi. Berdasarkan hasil R-Square dan RMSE menggunakan Lazy Predict pada Tabel 1, disimpulkan bahwa 3 algoritma terbaik yang akan digunakan untuk mempredikasi harga adalah **RandomForestRegressor**, **ExtraTreeRegressor**, dan **GradientBoostingRegressor**.
 
