@@ -1,4 +1,4 @@
-# Laporan Akhir Kecerdasan Buatan
+# Laporan Akhir Kecerdasan Buatan - Kelompok IK2D
 
 **Anggota Kelompok :**
 
@@ -7,104 +7,98 @@
 
 ## Domain Proyek
 
-*Smartphone* di era digital saat ini menjadi barang yang sangat esensial untuk menunjang pembelajaran dan pekerjaan. Menurut data dari Asosiasi Penyelenggara Jasa Internet Indonesia (APJII) tahun 2022 menunjukan bahwa 89,03% penduduk Indonesia memiliki smartphone [1]. Bahkan lebih dari 70% penduduk memiliki *smartphone* lebih dari dua. Harga *smartphone* menjadi parameter yang paling berpengaruh terhadap kecenderungan seseorang membeli *smartphone*. Oleh karena itu kemampuan *machine learning* dalam memprediksi harga *smartphone* menjadi sangat penting untuk masyarakat yang ingin mencari *smartphone* sesuai kebutuhannya.
+Jam tangan merupakan alat yang berfungsi sebagai penunjuk waktu agar manusia selalu tepat waktu dalam melakukan segala sesuatu. Namun di era modern seperti sekarang ini, jam tangan tidak hanya berfungsi sebagai alat penunjuk waktu saja melainkan sudah menjadi trend fashion bagi masyarakat [1]. Masyarakat sangat memperhatikan penampilan dan fashion yang digunakan, belum lagi aksesoris pelengkap untuk menunjang penampilan, oleh karena itu jam tangan hadir untuk memberikan sentuhan dalam menyempurnakan penampilannya dan juga sangat cocok digunakan dalam aktivitas sehari-hari, baik formal maupun informal. Masyarakat juga percaya bahwa menggunakan jam tangan bermerek dapat meningkatkan kualitas penampilan menjadi lebih elegan, menunjukkan kepribadian seseorang, dan menunjukkan kelas sosial seseorang di mata orang lain [2]. 
 
-Terdapat beberapa parameter untuk memprediksi harga *smartphone*. Salah satu parameter tersebut adalah ukuran RAM, ukuran Layar, Prosesor, ukuran memori internal, kapasitas baterai dan sebagainya [2]. Salah satu bidang penelitian machine learning yang didapat digunakan untuk melakukan predikasi adalah regresi. Algoritma regresi dapat memprediksi nilai dari sebuah variabel target berdasarkan nilai dari beberapa variabel input (atau fitur). Terdapat beberapa penelitian terkait prediksi harga *smartphone*. Salah satu diantaranya adalah penelitian yang dilakukan oleh [3] yang memprediksi harga *smartphone* menggunakan beberapa algoritma *machine learning* seperti Random Forest, Logistic Regression, Decision Tree, Linear Discriminant Analysis, K-Nearest Neighbor and SVC. Hasilnya algoritma SVC memiliki akurasi paling baik.
+Harga jam tangan mewah (*luxury watch*) menjadi salah satu parameter yang paling berpengaruh terhadap kecenderungan seseorang membeli *luxury watch*. Oleh karena itu kemampuan *machine learning* dalam memprediksi harga *luxury watch* menjadi sangat penting untuk masyarakat yang ingin mencari jam tangan khususnya *luxury watch* sesuai kebutuhannya. Terdapat beberapa parameter untuk memprediksi harga *luxury watch*. Beberapa parameter tersebut adalah *brand*, *model*, *case material*, *movement type*, *power reserve*, *water resistence* dan sebagainya. 
 
-Selanjutnya penelitian yang dilakukan oleh [4] yang melakukan prediksi harga *smartphone* menggunakan 25 jenis algoritma *machine learning*. Hasil pengujian menunjukan algoritma SVM memiliki akurasi paling besar yaitu 0.9470. Pada proyek ini dilakukan prediksi harga smartphone menggunakan beberapa algoritma machine learning. Sebelum pelatihan model dan evaluasi, terlebih dahulu dilakukan manipulasi data, dan pembersihan data agar model *machine learning* yang dihasilkan memiliki akurasi yang tinggi.
+Salah satu bidang penelitian machine learning yang didapat digunakan untuk melakukan predikasi adalah regresi. Algoritma regresi dapat memprediksi nilai dari sebuah variabel target berdasarkan nilai dari beberapa variabel input (atau fitur). Harga *luxury watch* dapat diprediksi menggunakan beberapa algoritma *machine learning* seperti Random Forest, Linear Regression, Extra Tree, Gradient Boosting, Decision Tree and SVR. Dari beberapa algoritma tersebut, algoritma Random Forest Reression memiliki akurasi paling baik.
+
+Pada proyek ini dilakukan prediksi harga *luxury watch* menggunakan beberapa algoritma machine learning. Sebelum pelatihan model dan evaluasi, terlebih dahulu dilakukan manipulasi data, dan pembersihan data agar model *machine learning* yang dihasilkan memiliki akurasi yang tinggi. Proyek ini akan berfokus pada pembuatan sebuah sistem untuk memprediksi harga *luxury watch*.
 
 ## Business Understanding
 
-Setiap tahun terdapat berbagai jenis tipe *smartphone* dengan fitur yang bermacam-macam. Umumnya *smartphone* tipe tertentu meng-*upgrade* perangkatnya dari segi penambahan ukuran kamera, kapasitas RAM dan memori internal, serta kecepatan prosesor. Penambahan fitur pada *smartphone* akan mempengaruhi kenaikan harga *smartphone* tersebut. Oleh karena itu calon konsumen harus memahami spesifikasi *smartphone* yang akan dibeli disesuaikan dengan budget yang dimiliki. Diperlukan sebuah model *machine learning* yang dapat memprediksi harga *smartphone* dengan akurat. Sehingga calon konsumen dapat menyiapkan budget yang digunakan untuk membeli *smartphone* dengan spesifikasi yang dia diinginkan.
+Jam tangan mewah merupakan produk yang memiliki nilai prestise dan nilai fashion tinggi dalam industri jam tangan. Masyarakat yang tertarik pada jam tangan mewah sering kali mempertimbangkan merek, model, bahan, jenis mekanisme, daya tahan air, dan faktor-faktor lainnya sebelum melakukan pembelian. Namun, harga jam tangan mewah juga menjadi faktor penting yang mempengaruhi keputusan pembelian. Menurut data dari Statista tahun 2023 menunjukan bahwa segmen jam tangan mewah di Indonesia diproyeksikan tumbuh sebesar 3,30% (2023-2028) menghasilkan volume pasar sebesar US$32,59 juta atau setara dengan Rp 472.055 juta pada tahun 2028 [3]. Dalam konteks ini, kemampuan menggunakan *machine learning* untuk memprediksi harga jam tangan mewah menjadi penting bagi calon pembeli yang ingin memperoleh informasi tentang harga yang diharapkan sebelum melakukan pembelian.
 
 #### Problem Statements
 
 Berdasarkan permasalahan yang telah dijelaskan, *problem statements* dari proyek ini adalah sebagai berikut.
 
-1. Fitur-fitur apa saja yang paling berpengaruh terhadap harga *smartphone* ?
-2. Bagaimana proses *Pre-Processing* yang dilakukan agar menghasilkan model *machine learning* yang akurat ?
-3. Bagaimana membuat atau memilih model *machine learning* yang memiliki akurasi terbaik dalam memprediksi harga *smartphone* ?
+1. Fitur-fitur apa saja yang memiliki pengaruh signifikan terhadap penentuan harga jam tangan mewah (*luxury watch*)?
+2. Bagaimana melakukan proses manipulasi data dan pembersihan data agar model *machine learning* yang dihasilkan memiliki akurasi yang tinggi?
+3. Bagaimana memilih atau mengembangkan model *machine learning* yang memberikan prediksi harga jam tangan mewah (*luxury watch*) dengan akurasi terbaik?
 
 #### Goals
 
 Tujuan yang hendak dicapai dari proyek ini adalah sebagai berikut 
 
-1. Mengetahui fitur yang paling berkorelasi dengan penentuan harga *smartphone*.
-2. Membuat model *machine learning* yang dapat memprediksi harga *smartphone*.
-3. Memilih model *machine learning* yang menghasilkan prediksi paling akurat berdasarkan proses *preprocessing* yang dilakukan
+1. Mengidentifikasi fitur-fitur yang memiliki korelasi signifikan dengan harga jam tangan mewah (*luxury watch*).
+2. Mengembangkan model *machine learning* yang dapat memprediksi harga jam tangan mewah (*luxury watch*) dengan akurasi tinggi.
+
+3. Memilih model *machine learning* yang memberikan prediksi harga jam tangan mewah (*luxury watch*) dengan akurasi terbaik melalui proses manipulasi dan pembersihan data yang tepat.
 
 ####  Solution Statements
 
 Solusi yang diajukan untuk menyelesaikan masalah yang telah diuraikan adalah sebagai berikut.
 
-1. Melakukan analisis deskriptif untuk mengetahui pola dan informasi yang tersimpan di data mengenai fitur atau spesifikasi yang mempengaruhi harga *smartphone*.
-2. Melakukan proses *Data Manipulation* untuk menggabungkan kolom-kolom yang berpengaruh terhadap akurasi predisi harga *smartphone* 
-3. Melakukan  Proses *Preprocessing* seperti :
-   - Mengecek *missing value* dan duplikasi data. Kebetulan dataset yang digunakan tidak ada *missing value* dan duplikasi data.
-   - Menghapus kolom yang tidak berpengaruh terhadap prediksi harga
-   - Melakukan visualisasi data untuk melihat persebaran dan korelasi antar kolom
-   - Membagi data menjadi *training* dan *test set*, dengan prosentase 85% banding 15%. Alasan menggunakan 15% karena jumlah data yang digunakan banyak, jadi hanya dengan 15% sudah didapatkan banyak data tes.
-   - Melakukan *Encoding* terhadap kolom yang bertipe objek / kategorikal menggunakan fungsi `Map`.
-4. Melakukan pemilihan model terbaik menggunakan LazyPredict
-   - Memilih 4 algoritma yang menghasilkan model dengan performa terbaik
-   - Perfoma model terbaik dilihat dari skor *Mean Square Error* (MSE), *Root Mean Square Error* (RMSE), dan *R Square* (R2).
+1. Melakukan analisis deskriptif untuk mengidentifikasi fitur-fitur yang memiliki korelasi signifikan dengan harga jam tangan mewah.
+2. Melakukan manipulasi dan pembersihan data, termasuk penggabungan kolom yang berpengaruh terhadap akurasi prediksi harga jam tangan mewah.
+3. Melakukan proses *preprocessing*, seperti:
+   - Memeriksa keberadaan data yang hilang (*missing value*) dan duplikasi data. Jika ada, melakukan penanganan yang sesuai.
+   - Menghapus kolom yang tidak berpengaruh signifikan terhadap prediksi harga jam tangan mewah.
+   - Melakukan visualisasi data untuk memahami persebaran dan korelasi antar kolom.
+   - Membagi data menjadi set pelatihan (*training set*) dan set pengujian (*test set*) dengan proporsi tertentu yaitu prosentase 85% banding 15%. Alasan menggunakan 15% karena jumlah data yang digunakan banyak sehingga hanya dengan 15% sudah didapatkan banyak data tes.
+   - Melakukan *encoding* terhadap kolom kategorikal menggunakan metode yang sesuai, seperti *label encoding* atau *one-hot encoding*.
+4. Melakukan pemilihan model *machine learning* yang memberikan performa terbaik dalam memprediksi harga jam tangan mewah menggunakan LazyPredict. 
+   - Memilih 3 algoritma yang menghasilkan model *machine learning* terbaik. Pemilihan model dapat dilakukan dengan melakukan pelatihan dan evaluasi model menggunakan beberapa algoritma *machine learning* seperti Random Forest Regression, Linear Regression, Extra Trees, Gradient Boosting, Decision Tree, dan SVR. 
+   - Performa model akan dievaluasi berdasarkan metrik evaluasi yang relevan, seperti Mean Squared Error (MSE), Root Mean Squared Error (RMSE), dan R-squared (R2).
 
 ## Data Understanding
 
-Dataset yang digunakan pada proyek ini diperoleh dari Kaggle. Silahkan kunjungi tautan berikut [Mobile Phone Specifications and Prices](https://www.kaggle.com/datasets/pratikgarai/mobile-phone-specifications-and-prices) untuk mengakses dataset yang dipakai. Adapun variabel-variabel yang terdapat pada dataset adalah sebagai berikut :
+Dataset yang digunakan pada proyek ini diperoleh dari Kaggle. Silahkan kunjungi tautan berikut [Luxury Watches Price](https://www.kaggle.com/datasets/rkiattisak/luxury-watches-price-dataset) untuk mengakses dataset yang dipakai. Adapun variabel-variabel yang terdapat pada dataset adalah sebagai berikut :
 
-1. **Name**: Nama *Smarphone*
-2. **Brand**: Nama Brand
-3. **Model**: Model *Smarphone*
-4. **Battery capacity (mAh)**: Kapasitas Baterai dalam mAh
-5. **Screen size (inches)**: Ukuran layar dalam Inchi
-6. **Touchscreen**: Informasi apakah *Smarphone* ada Touchscreen atau tidak
-7. **Resolution x**: Resolusi lebar layar dari *Smarphone*
-8. **Resolution y**: Resolusi panjang layar dari *Smarphone*
-9. **Processor**: Jumlah core dari Prosesor
-10. **RAM (MB)**: Jumlah RAM dari  *Smarphone* dalam MB
-11. **Internal storage**: Kapasitas memori internal dalam GB
-12. **Rear camera**: Resolusi kamera belakang dalam MP (0 jika tidak ada kamera belakang)
-13. **Front camera**: Resolusi kamera depan dalam MP (0 jika tidak ada kamera belakang)
-14. **Operation system**: OS yang digunakan pada *Smarphone*
-15. **Wi-Fi**: Ketersediaan Wi-Fi dari *Smarphone*
-16. **Bluetooth**: Ketersediaan Bluetooth dari *Smarphone*
-17. **GPS**: Ketersediaan GPS dari *Smarphone*
-18. **Number of SIMs**: Jumlah slot SIM card *Smarphone*
-19. **3G**: Ketersediaan 3G dari *Smarphone*
-20. **4G/LTE**: Ketersediaan 4G/LTE dari *Smarphone*
-21. **Price:** Harga *Smarphone* dalam mata uang india (INR)
+1. **Brand**: Merk Jam Tangan
+2. **Model**: Model Jam Tangan
+3. **Case Material**: Material (Bahan) yang digunakan pada Case Jam Tangan
+4. **Strap Material**: Material atau bahan yang digunakan pada Pergelangan (Strap) Jam Tangan
+5. **Movement Type**: Jenis Mekanisme Pada Jam Tangan
+6. **Water Resistance**: kemampuan tahan jam tangan terhadap tekanan air pada kedalaman tertentu
+7. **Case Diameter (mm)**: panjang Diameter Jam dalam mm (milimeter)
+8. **Case Thickness (mm)**: Ketebalan case jam tangan dalam mm (milimeter)
+9. **Band Width (mm)**: lebar tali jam dalam mm (milimeter)
+10. **Dial Color**: Warna penanda pada jam
+11. **Crystal Material**: bahan yang digunakan untuk menutupi dial
+12. **Complications**: fitur atau fungsi tambahan
+13. **Power Reserve**: lama jam tangan dapat berfungsi
+14. **Price (USD)**: Harga jam tangan dalam USD
 
-Pada dataset, terdapat 12 fitur numerikal dan 9 fitur kategorikal. Ringkasan statistik dari data-data numerikal dapat dilihat pada Tabel 1.
+Pada dataset, terdapat 4 fitur numerikal dan 10 fitur kategorikal. Ringkasan statistik dari data-data numerikal dapat dilihat pada Tabel 1.
 
 <div style="text-align:center">Tabel 1. Ringkasan Statistik Data-Data Numerikal Pada Dataset</div>
 
-|       | Unnamed: 0  | Battery capacity (mAh) | Screen size (inches) | Resolution x | Resolution y | Processor   | RAM (MB)     | Internal storage (GB) | Rear camera | Front camera | Number of SIMs | Price         |
-| ----- | ----------- | ---------------------- | -------------------- | ------------ | ------------ | ----------- | ------------ | --------------------- | ----------- | ------------ | -------------- | ------------- |
-| count | 1359.000000 | 1359.000000            | 1359.000000          | 1359.000000  | 1359.000000  | 1359.000000 | 1359.000000  | 1359.000000           | 1359.000000 | 1359.000000  | 1359.000000    | 1359.000000   |
-| mean  | 679.000000  | 2938.489330            | 5.291310             | 811.543046   | 1490.777778  | 5.551141    | 2488.777778  | 30.654864             | 12.070199   | 7.037969     | 1.833701       | 11465.825607  |
-| std   | 392.453819  | 873.514133             | 0.671357             | 270.707271   | 557.780120   | 2.196562    | 1664.440386  | 36.950241             | 8.948337    | 6.295448     | 0.374457       | 13857.497077  |
-| min   | 0.000000    | 1010.000000            | 2.400000             | 240.000000   | 320.000000   | 1.000000    | 64.000000    | 0.064000              | 0.000000    | 0.000000     | 1.000000       | 494.000000    |
-| 25%   | 339.500000  | 2300.000000            | 5.000000             | 720.000000   | 1280.000000  | 4.000000    | 1000.000000  | 8.000000              | 8.000000    | 2.000000     | 2.000000       | 4763.500000   |
-| 50%   | 679.000000  | 3000.000000            | 5.200000             | 720.000000   | 1280.000000  | 4.000000    | 2000.000000  | 16.000000             | 12.200000   | 5.000000     | 2.000000       | 6999.000000   |
-| 75%   | 1018.500000 | 3500.000000            | 5.700000             | 1080.000000  | 1920.000000  | 8.000000    | 3000.000000  | 32.000000             | 13.000000   | 8.000000     | 2.000000       | 11999.000000  |
-| max   | 1358.000000 | 6000.000000            | 7.300000             | 2160.000000  | 3840.000000  | 10.000000   | 12000.000000 | 512.000000            | 108.000000  | 48.000000    | 3.000000       | 174990.000000 |
+|       | Case Diameter (mm) | Case Thickness (mm) | Band Width (mm) | Price (USD) |
+| ----- | ------------------ | ------------------- | --------------- | ----------- |
+| count | 507.00             | 507.00              | 507.00          | 506.00      |
+| mean  | 41.05              | 11.59               | 21.11           | 12082.96    |
+| std   | 2.54               | 2.49                | 1.66            | 10419.82    |
+| min   | 27.50              | 5.00                | 15.00           | 495.00      |
+| 25%   | 40.00              | 9.80                | 20.00           | 5500.00     |
+| 50%   | 41.00              | 12.00               | 20.00           | 8350.00     |
+| 75%   | 42.00              | 13.30               | 22.00           | 16450.00    |
+| max   | 46.50              | 17.50               | 28.00           | 70000.00    |
 
 Pada tahap *Data Understanding* dilakukan analisis data eksploratif untuk mendapatkan wawasan tentang karakteristik data, memahami struktur data, dan mengidentifikasi potensi masalah atau kesalahan yang mungkin terjadi. Kegiatan Data Understanding yang dilakukan pada Proyek ini antara lain :
 
 - Memberikan informasi seperti jumlah data, *missing value*, duplikasi data, korelasi antar kolom, dan sebaran data.
 
-- Melakukan manipulasi data untuk mendapatkan variabel atau fitur baru seperti menggabungkan kolom Resolution X dan Resolution Y untuk mendapatkan nilai PPI (*Pixel Per Inch*).
+- Melakukan visualisasi data untuk mengetahui korelasi dan sebaran data. Visualisasi korelasi antar kolom digambarkan dalam heatmap seperti ditunjukan Gambar 1. Berdasarkan diagaram heatmap Gambar 1 diketahui bahwa terdapat beberapa kolom seperti Water Resistance, Case Diameter, Case Thickness, Band Width dan Power Reserve yang berkorelasi dengan kolom 'Price'.  Semakin mendekati nilai 1 maka korelasi semakin tinggi. Kemudian hasil visualisasi heatmap hanya menampilkan korelasi pada kolom yang memberikan data numerikal, sedangkan kolom yang memberikan hasil kategorikal tidak dapat diketahui korelasinya.
 
-- Melakukan visualisasi data untuk mengetahui korelasi dan sebaran data. Visualisasi korelasi antar kolom digambarkan dalam heatmap seperti ditunjukan Gambar 1. Berdasarkan diagaram heatmap Gambar 1 diketahui bahawa terdapat beberapa kolom seperti Battery, Processor, RAM, dll yang berkorelasi dengan kolom 'Prize'.  Semakin mendekati nilai 1 maka korelasi semakin tinggi. Kemudian hasil visualisasi heatmap hanya menampilkan korelasi pada kolom yang memberikan data numerikal, sedangkan kolom yang memberikan hasil kategorikal tidak dapat diketahui korelasinya.
-
-  <img src="https://afandistudio.net/prak_ai/korelasi.png" style="zoom:67%;" />
+  <img  src="https://github.com/afifahnaurak/Laporan-Akhir-Kecerdasan-Buatan/assets/116862851/9647c17c-0ad3-478c-b989-5bfe83d59acd" style="zoom:67%;" />
   
   <div style="text-align:center">Gambar 1. Visualisasi Korelasi Data dengan Heatmap</div>
   
-  Sedangkan contoh visualisasi dari sebaran data ditunjukan pada Gambar 2. Visualisasi yang ditunjukan pada Gambar 2 menunjukan bahwa ada ketidakseimbangan data pada kolom Battery, Screen_Size, Processor, dan RAM.
+  Sedangkan contoh visualisasi dari sebaran data ditunjukan pada Gambar 2. Visualisasi yang ditunjukan pada Gambar 2 menunjukan bahwa ada ketidakseimbangan data pada kolom Case Diameter, Case Thickness, Band Width, dan Power Reserve.
   
-  ![](https://afandistudio.net/prak_ai/sebaran_data_mlt1.png)
+  ![](https://github.com/afifahnaurak/Laporan-Akhir-Kecerdasan-Buatan/assets/116862851/a4e2538b-4c56-467c-b6d5-550b4e2fe983)
 
 <div style="text-align:center">Gambar 2. Visualisasi Data pada Dataset</div>
 
@@ -116,7 +110,7 @@ Teknik data preparation yang dilakukan pada proyek ini adalah sebagai berikut :
 
 2. Data Splitting: Membagi dataset menjadi data latih dan data uji. Pada proyek ini perbandingan data latih dan data uji adalah 85 : 15.
 
-3. Menampilkan informasi jumlah data latih dan data uji. Jumlah data latih adalah 1155, sedangkan data uji terdat 204 data. jumlah data fitur yang dipakai untuk pelatihan adalah 10.
+3. Menampilkan informasi jumlah data latih dan data uji. Jumlah data latih adalah 402, sedangkan data uji terdat 72 data. jumlah data fitur yang dipakai untuk pelatihan adalah 9.
 
    
 
@@ -131,33 +125,56 @@ Pada tahap ini dilakukan proses pelatihan untuk mendapatkan model dengan perform
 
    <div style="text-align:center">Tabel 2. Hasil Perbandingan model menggunakan Lazy Predict</div>
 
-   | Model                         | Adjusted R-Squared | R-Squared | RMSE | Time Taken |
-   | ----------------------------- | ------------------ | --------- | ---- | ---------- |
-   | GradientBoostingRegressor     | 0.71               | 0.72      | 0.40 | 0.53       |
-   | RandomForestRegressor         | 0.70               | 0.72      | 0.40 | 0.53       |
-   | BaggingRegressor              | 0.69               | 0.71      | 0.41 | 0.07       |
-   | SVR                           | 0.69               | 0.70      | 0.41 | 0.14       |
-   | NuSVR                         | 0.69               | 0.70      | 0.41 | 0.26       |
-   | LGBMRegressor                 | 0.68               | 0.70      | 0.42 | 0.10       |
-   | HistGradientBoostingRegressor | 0.68               | 0.69      | 0.42 | 1.16       |
-   | LassoLarsIC                   | 0.66               | 0.68      | 0.43 | 0.04       |
-   | LassoCV                       | 0.66               | 0.68      | 0.43 | 0.17       |
-   | LarsCV                        | 0.66               | 0.68      | 0.43 | 0.07       |
-   | LassoLarsCV                   | 0.66               | 0.68      | 0.43 | 0.08       |
-   | HuberRegressor                | 0.66               | 0.68      | 0.43 | 0.10       |
-   | ElasticNetCV                  | 0.66               | 0.68      | 0.43 | 0.17       |
-   | Lars                          | 0.66               | 0.67      | 0.43 | 0.03       |
-   | LinearRegression              | 0.66               | 0.67      | 0.43 | 0.02       |
-   | TransformedTargetRegressor    | 0.66               | 0.67      | 0.43 | 0.02       |
-   | RidgeCV                       | 0.66               | 0.67      | 0.43 | 0.03       |
-   | Ridge                         | 0.66               | 0.67      | 0.43 | 0.02       |
-   | BayesianRidge                 | 0.66               | 0.67      | 0.43 | 0.04       |
+   | Model                         | Adjusted R-Squared          | R-Squared                   | RMSE            | Time Taken |
+   | ----------------------------- | --------------------------- | --------------------------- | --------------- | ---------- |
+   | RandomForestRegressor         | 0.78                        | 0.81                        | 0.34            | 0.31       |
+   | ExtraTreeRegressor            | 0.78                        | 0.81                        | 0.34            | 0.04       |
+   | GradientBoostingRegressor     | 0.76                        | 0.79                        | 0.36            | 0.13       |
+   | BaggingRegressor              | 0.75                        | 0.78                        | 0.36            | 0.07       |
+   | XGBRegressor                  | 0.73                        | 0.77                        | 0.37            | 0.14       |
+   | HistGradientBoostingRegressor | 0.73                        | 0.76                        | 0.38            | 0.38       |
+   | ExtraTreesRegressor           | 0.72                        | 0.76                        | 0.38            | 0.24       |
+   | LGBMRegressor                 | 0.70                        | 0.73                        | 0.40            | 0.08       |
+   | AdaBoostRegressor             | 0.58                        | 0.63                        | 0.47            | 0.19       |
+   | DecisionTreeRegressor         | 0.55                        | 0.61                        | 0.48            | 0.03       |
+   | KNeighborsRegressor           | 0.46                        | 0.53                        | 0.53            | 0.03       |
+   | SVR                           | 0.32                        | 0.41                        | 0.59            | 0.05       |
+   | NuSVR                         | 0.32                        | 0.40                        | 0.60            | 0.06       |
+   | TransformedTargetRegressor    | 0.17                        | 0.27                        | 0.66            | 0.03       |
+   | LinearRegression              | 0.17                        | 0.27                        | 0.66            | 0.03       |
+   | RidgeCV                       | 0.17                        | 0.27                        | 0.66            | 0.03       |
+   | ElasticNetCV                  | 0.16                        | 0.27                        | 0.66            | 0.18       |
+   | Ridge                         | 0.16                        | 0.27                        | 0.66            | 0.03       |
+   | BayesianRidge                 | 0.15                        | 0.26                        | 0.66            | 0.09       |
+   | LassoCV                       | 0.15                        | 0.26                        | 0.66            | 0.13       |
+   | LassoLarsIC                   | 0.15                        | 0.26                        | 0.66            | 0.04       |
+   | LassoLarsCV                   | 0.14                        | 0.25                        | 0.67            | 0.08       |
+   | PoissonRegressor              | 0.11                        | 0.22                        | 0.68            | 0.04       |
+   | LarsCV                        | 0.09                        | 0.20                        | 0.69            | 0.08       |
+   | HuberRegressor                | 0.07                        | 0.19                        | 0.69            | 0.08       |
+   | LinearSVR                     | 0.06                        | 0.18                        | 0.70            | 0.03       |
+   | OrthogonalMatchingPursuitCV   | -0.02                       | 0.11                        | 0.73            | 0.03       |
+   | GammaRegressor                | -0.02                       | 0.11                        | 0.73            | 0.04       |
+   | TweedieRegressor              | -0.02                       | 0.11                        | 0.73            | 0.02       |
+   | OrthogonalMatchingPursuit     | -0.05                       | 0.08                        | 0.74            | 0.03       |
+   | SGDRegressor                  | -0.06                       | 0.07                        | 0.74            | 0.03       |
+   | KernelRidge                   | -0.11                       | 0.03                        | 0.76            | 0.05       |
+   | QuantileRegressor             | -0.15                       | -0.00                       | 0.77            | 1.70       |
+   | DummyRegressor                | -0.15                       | -0.00                       | 0.77            | 0.03       |
+   | LassoLars                     | -0.15                       | -0.00                       | 0.77            | 0.03       |
+   | Lasso                         | -0.15                       | -0.00                       | 0.77            | 0.03       |
+   | ElasticNet                    | -0.15                       | -0.00                       | 0.77            | 0.03       |
+   | PassiveAggressiveRegressor    | -0.28                       | -0.12                       | 0.82            | 0.04       |
+   | MLPRegressor                  | -0.81                       | -0.58                       | 0.97            | 0.74       |
+   | RANSACRegressor               | -1.79                       | -1.43                       | 1.20            | 0.15       |
+   | GaussianProcessRegressor      | -10.05                      | -8.65                       | 2.39            | 0.07       |
+   | Lars                          | -42988557141202895372288.00 | -37539303419078584041472.00 | 149241999378.87 | 0.03       |
 
-   Algoritma dengan performa terbaik dilihat dari nilai R-Square dan RMSE. Semakin besar nilai R-Square (mendekati 1) maka model semakin akurat. Sedangkan pada RMSE, apabila nilai semain kecil (mendekati 0), maka akurasi model akan semakin tinggi. Berdasarkan hasil R-Square dan RMSE menggunakan Lazy Predict pada Tabel 1, disimpulkan bahwa 3 algoritma terbaik yang akan digunakan untuk mempredikasi harga adalah **GradientBoostingRegressor**, **RandomForestRegressor**, dan **BaggingRegressor**.
+   Algoritma dengan performa terbaik dilihat dari nilai R-Square dan RMSE. Semakin besar nilai R-Square (mendekati 1) maka model semakin akurat. Sedangkan pada RMSE, apabila nilai semain kecil (mendekati 0), maka akurasi model akan semakin tinggi. Berdasarkan hasil R-Square dan RMSE menggunakan Lazy Predict pada Tabel 1, disimpulkan bahwa 3 algoritma terbaik yang akan digunakan untuk mempredikasi harga adalah **RandomForestRegressor**, **ExtraTreeRegressor**, dan **GradientBoostingRegressor**.
 
 2. Menggunakan `ColumnTransformer` untuk mengubah data kategorik menjadi numerik
 
-   Pada proyek ini masih mempertahankan kolom kategorikal yaitu Brand dan OS. Sebab pada saat ingin mempredikasi harga smartphone, calon pembeli tentunya akan memilih Brand dan OS dalam bentuk kategori bukan numerik. Oleh karena itu kita ubah data kategorik menjadi numberik menggunkan teknik OneHotEncoding. Tapi sebelum dilakukan teknik `OneHotEncoding` dilakukan harus menampilkan indeks dari masing-masing kolom menggunakan fungsi `enumerate()`. Brand berada di indeks 0, dan OS berada di index 9. Selanjutkan dilakukan proses `ColumnTransformer`.
+   Pada proyek ini masih mempertahankan kolom kategorikal yaitu *Brand* dan *Power Reserve*. Sebab pada saat ingin mempredikasi harga *luxury brand*, calon pembeli tentunya akan memilih *Brand* dan *Power Reserve* dalam bentuk kategori bukan numerik. Oleh karena itu kita ubah data kategorik menjadi numberik menggunkan teknik OneHotEncoding. Tapi sebelum dilakukan teknik `OneHotEncoding` dilakukan harus menampilkan indeks dari masing-masing kolom menggunakan fungsi `enumerate()`. *Brand* berada di indeks 0, dan *Power Reserve* berada di index 8. Selanjutkan dilakukan proses `ColumnTransformer`.
 
 3. Membuat pipeline untuk menggabungkan data numerik dan kategorik
 
@@ -167,60 +184,57 @@ Pada tahap ini dilakukan proses pelatihan untuk mendapatkan model dengan perform
 
    Setelah dilakukan proses pelatihan oleh Lazy Predict, diperoleh 3 algoritma dengan performa terbaik yaitu :
 
-   - **GradientBoostingRegressor**
-
-     GradientBoostingRegressor adalah algoritma pemodelan yang digunakan dalam pembelajaran mesin untuk memprediksi variabel target berkelanjutan. Ini adalah metode ensambel yang menggabungkan beberapa pohon keputusan untuk membuat model yang lebih kuat. Algoritma GradientBoostingRegressor bekerja dengan menggabungkan banyak pohon keputusan sederhana. Setiap pohon yang ditambahkan ke model berusaha untuk memperbaiki kesalahan prediksi yang dihasilkan oleh pohon sebelumnya. Algoritma ini bekerja dengan cara mengoptimalkan gradien fungsi kerugian (misalnya, *Mean Squared Error*) menggunakan proses iteratif. Ilustrasi dari cara kerja GradienBoostingRegressor ditunjukan pada Gambar 2.
-
-     ![](https://afandistudio.net/prak_ai/GradienRegression.png)
-
-     <div style="text-align:center">Gambar 2. Ilustrasi GradienBoostingRegressor [5]</div>
-
    - **RandomForestRegressor**
 
      RandomForestRegressor adalah algoritma pemodelan yang digunakan dalam pembelajaran mesin untuk memprediksi variabel target berkelanjutan. Ini adalah metode ensambel yang menggabungkan beberapa pohon keputusan acak (*random decision trees*) untuk membuat model yang lebih kuat. Pada dasarnya, algoritma RandomForestRegressor bekerja dengan menggabungkan hasil dari banyak pohon keputusan acak yang diberi bobot yang sama. Setiap pohon keputusan acak dibangun dengan menggunakan subset acak dari data pelatihan dan subset acak dari fitur (variabel independen). Proses ini dikenal sebagai bootstrap aggregating atau biasa disebut juga sebagai "bagging". Ilustrasi dari cara kerja RandomForestRegressor ditunjukan pada Gambar 3.
 
      <img src="https://afandistudio.net/prak_ai/RFRegression.jpg" style="zoom: 25%;" />
 
-     <div style="text-align:center">Gambar 3. Ilustrasi RandomForestRegressor [6]</div>
+     <div style="text-align:center">Gambar 3. Ilustrasi RandomForestRegressor [4]</div>
 
-   - **BaggingRegressor**
+   - **ExtraTreeRegressor**
 
-     BaggingRegressor adalah algoritma pemodelan yang digunakan dalam pembelajaran mesin untuk memprediksi variabel target berkelanjutan. Ini adalah metode ensambel yang menggabungkan beberapa model regresi (misalnya, Regresi Linier, DecisionTreeRegressor) untuk membuat model yang lebih kuat. Pada dasarnya, algoritma BaggingRegressor bekerja dengan membuat beberapa model regresi yang berbeda menggunakan subset acak dari data pelatihan. Setiap model regresi dibangun secara independen dan tidak saling bergantung satu sama lain. Ketika melakukan prediksi, hasil dari semua model regresi digabungkan untuk menghasilkan prediksi akhir dengan menggunakan rata-rata atau mayoritas suara (tergantung pada jenis variabel target). Ilustrasi dari cara kerja BaggingRegressor ditunjukan pada Gambar 4.
+     Extra Tree Regression, atau disebut juga Extreme Tree Regression, adalah sebuah algoritma pembelajaran mesin yang digunakan untuk melakukan regresi, yaitu memprediksi nilai kontinu berdasarkan fitur-fitur yang ada. Algoritma ini merupakan variasi dari algoritma ExtraTree (pohon tambahan) yang telah dijelaskan sebelumnya. Extra Tree Regression mengadopsi pendekatan ensemble learning dengan membangun sejumlah besar pohon keputusan yang tidak terkorelasi secara acak. Pada setiap simpul pemisahan pohon, algoritma menggunakan pendekatan yang acak untuk memilih fitur-fitur yang digunakan untuk membagi data. Kemudian, algoritma memilih pemisahan dengan nilai yang optimal secara acak dari subset nilai yang dipilih untuk membagi data pada simpul tersebut. Ilustrasi dari cara kerja BaggingRegressor ditunjukan pada Gambar 4.
 
-     <img src="https://afandistudio.net/prak_ai/BaggingRegressor.png" style="zoom:50%;" />
+   <img src="https://github.com/afifahnaurak/Laporan-Akhir-Kecerdasan-Buatan/assets/116862851/4b7cff84-efd7-4869-9e9d-ba8d6511d26a" style="zoom:50%;" />
 
-     <div style="text-align:center">Gambar 4. Ilustrasi BaggingRegressor [7]</div>
+   <div style="text-align:center">Gambar 4. Ilustrasi ExtraTreeRegressor [5]</div>
 
-     Namun, BaggingRegressor tidak memberikan interpretasi model yang langsung seperti Regresi Linier. Selain itu, dalam beberapa kasus, jika terdapat korelasi yang kuat antara fitur, BaggingRegressor mungkin tidak memberikan peningkatan yang signifikan dalam kinerja prediksi dibandingkan dengan model regresi tunggal.
+   Dibandingkan dengan algoritma random forest, algoritma ini memiliki efisiensi komputasi yang lebih tinggi dan akurasi yang lebih tinggi. Algoritma ExtraTree sangat mirip dengan algoritma random forest. Meskipun keduanya terdiri dari beberapa decision tree, ExtraTree dan random forest memiliki dua perbedaan. pertama, random forest menggunakan algoritma Bagging, yang berarti sampel pelatihan untuk setiap weak learner tidak semuanya, tetapi ExtraTree menggunakan semua sampel pelatihan untuk melatih setiap weak learner. Selain itu, ExtraTree mengadopsi strategi pemilihan acak untuk memilih fitur, sehingga hasilnya lebih baik daripada random forest. kedua, random forest mendapatkan atribut bifurkasi terbaik dalam subset acak, tetapi ExtraTree mendapatkan nilai bifurkasi secara sepenuhnya acak untuk melaksanakan bifurkasi pohon keputusan.
+
+   - **GradientBoostingRegressor**
+
+     GradientBoostingRegressor adalah algoritma pemodelan yang digunakan dalam pembelajaran mesin untuk memprediksi variabel target berkelanjutan. Ini adalah metode ensambel yang menggabungkan beberapa pohon keputusan untuk membuat model yang lebih kuat. Algoritma GradientBoostingRegressor bekerja dengan menggabungkan banyak pohon keputusan sederhana. Setiap pohon yang ditambahkan ke model berusaha untuk memperbaiki kesalahan prediksi yang dihasilkan oleh pohon sebelumnya. Algoritma ini bekerja dengan cara mengoptimalkan gradien fungsi kerugian (misalnya, *Mean Squared Error*) menggunakan proses iteratif. Ilustrasi dari cara kerja GradienBoostingRegressor ditunjukan pada Gambar 5.
+
+     ![](https://afandistudio.net/prak_ai/GradienRegression.png)
+
+     <div style="text-align:center">Gambar 5. Ilustrasi GradienBoostingRegressor [6]</div>
 
 5. Menambahkan parameter tunning untuk mengingkatkan performa model
 
    Penambahan parameter menggunakan **Teknik Grid Search**. Sehingga diperoleh hyperparameter dari masing-masing algoritma adalah sebagai berikut.
 
-   - Parameter GradienBoostingRegressor
-   
-     - n_estimator = 90
-     - max_depth = 5
-     - min_samples_split = 10
-     - min_samples_leaf = 4
-     - max_features = 4
-     
    - Parameter RandomForestRegressor
    
      - n_estimator = 90
-   - max_samples = 0.4
-     - max_features = 0.5
-   
-   - Parameter BaggingRegressor
-
-     - n_estimators = 70
-     - max_features = 0.7
+     - max_features = 0.4
      - max_samples = 0.6
-  - warm_start= False
-     - oob_score = False
-  - bootstrap = False
-    
+   - Parameter ExtraTreeRegressor
+   
+     - criterion = mse
+     - max_depth = 32
+     - max_features = auto
+     - max_samples_leaf = 1
+     - max_samples_split = 2
+     - n_estimators = 10
+     - warn_start = True
+   - Parameter GradienBoostingRegressor
 
+     - n_estimator = 200
+     - max_depth = 4
+     - min_samples_split = 10
+     - min_samples_leaf = 5
+     - max_features = 3
 
 ## Evaluation
 
@@ -236,6 +250,8 @@ Pada tahap ini dilakukan proses pelatihan untuk mendapatkan model dengan perform
   - yi = *Actual Value* / Nilai Sebenarnya
   - ŷi = *Predicted Value* / Nilai Prediksi
 
+  
+  
 - RMSE adalah jumlah dari kesalahan kuadrat atau selisih antara nilai sebenarnya dengan nilai prediksi yang telah ditentukan. Cara menghitungnya tinggal mengakar kan mse menggunakan fungsi *np.sqrt*. Rumus dari RMSE adalah sebagai berikut.
   $$
   RMSE = \sqrt{(\frac{1}{n})\sum_{i=1}^{n}(y_{i} - x_{i})^{2}}
@@ -246,6 +262,8 @@ Pada tahap ini dilakukan proses pelatihan untuk mendapatkan model dengan perform
   - yi = *Actual Value* / Nilai Sebenarnya
   - ŷi = *Predicted Value* / Nilai Prediksi
 
+  
+  
 - R2 Score dijadikan sebagai pengukuran seberapa baik garis regresi mendekati nilai data asli yang dibuat melalui model. Rumus dari R2 Score adalah sebagai berikut.
   $$
   R^2 = 1 - {SS_R \over SS_T} =  1 - {\sum_{i} (y_i - ŷ_p) ^ 2 \over \sum_{i} (y_i - ȳ) ^ 2}
@@ -254,15 +272,19 @@ Pada tahap ini dilakukan proses pelatihan untuk mendapatkan model dengan perform
   - SSR : Kuadrat dari selisih nilai Y prediksi dengan nilai rata-rata Y = ∑ (Ypred – Yrata-rata)²
   - SST : Kuadrat dari selisih nilai Y aktual dengan nilai rata-rata Y = ∑ (Yaktual – Yrata-rata)²
 
-- Setelah melalui tahap pelatihan dan evaluasi menggunakan MSE, RMSE, dan R Square, diperoleh hasil bahwa algoritma **GradienBoosterRegressor** memiliki performa yang paling baik seperti ditunjukan Tabel 3. Maksud performa yang paling baik adalah memiliki nilai MSE dan RMSE yang mendekati nilai 0, serta memiliki nilai R2 Score yang mendekati nilai 1.
+  
+  
+- Setelah melalui tahap pelatihan dan evaluasi menggunakan MSE, RMSE, dan R Square, diperoleh hasil bahwa algoritma **RandomForestRegressor** memiliki performa yang paling baik seperti ditunjukan Tabel 3. Maksud performa yang paling baik adalah memiliki nilai MSE dan RMSE yang mendekati nilai 0, serta memiliki nilai R2 Score yang mendekati nilai 1.
 
   <div style="text-align:center">Tabel 3. Hasil Pengujian dari 3 Algoritma Teratas</div>
 
-  | id   | Model_Name       | MSE       | R2 Score  | RMSE      |
-  | ---- | ---------------- | --------- | --------- | --------- |
-  | 0    | GradienBoosting  | 0.1588188 | 0.7238088 | 0.3985208 |
-  | 1    | RandomForest     | 0.1639016 | 0.7149698 | 0.4048476 |
-  | 2    | BaggingRegressor | 0.1595067 | 0.7226127 | 0.3993828 |
+  | id   | Model_Name                | MSE       | R2 Score  | RMSE      |
+  | ---- | ------------------------- | --------- | --------- | --------- |
+  | 0    | RandomForestRegressor     | 0.1288363 | 0.7828588 | 0.3589377 |
+  | 1    | ExtraTreesRegressor       | 0.1263014 | 0.7871310 | 0.3553891 |
+  | 2    | GradientBoostingRegressor | 0.2313675 | 0.6100523 | 0.4810067 |
+
+  
 
 - Membandingkan data sebenarnya dengan hasil prediksi. Hasil perbandingan dapat dilihat pada Tabel 4.
 
@@ -270,40 +292,38 @@ Pada tahap ini dilakukan proses pelatihan untuk mendapatkan model dengan perform
   
   | Id   | y_true     | prediksi_GB | prediksi_RF | prediksi_BG |
   | :--- | :--------- | :---------- | :---------- | :---------- |
-  | 965  | 13.6112660 | 13.9000000  | 13.9000000  | 14.0000000  |
-  | 657  | 13.4294333 | 13.6000000  | 13.6000000  | 13.7000000  |
-  | 1002 | 13.7166489 | 13.5000000  | 13.4000000  | 13.4000000  |
-  | 918  | 13.2056893 | 13.7000000  | 13.7000000  | 13.8000000  |
-  | 798  | 14.3035242 | 13.9000000  | 14.0000000  | 14.0000000  |
+  | 79   | 12.5793451 | 12.4000000  | 12.4000000  | 12.3000000  |
+  | 101  | 10.9594359 | 11.5000000  | 11.5000000  | 11.5000000  |
+  | 271  | 11.5038999 | 11.5000000  | 11.5000000  | 11.5000000  |
+  | 225  | 11.6393378 | 12.0000000  | 12.0000000  | 12.0000000  |
+  | 466  | 13.2079537 | 13.1000000  | 13.1000000  | 13.0000000  |
   | ...  | ...        | ...         | ...         | ...         |
-  | 53   | 15.1153689 | 14.9000000  | 15.0000000  | 15.0000000  |
-  | 1027 | 13.5657933 | 13.8000000  | 13.8000000  | 14.0000000  |
-  | 436  | 14.1867278 | 13.3000000  | 13.3000000  | 13.3000000  |
-  | 161  | 14.9745150 | 15.9000000  | 15.9000000  | 15.8000000  |
-  | 47   | 15.2850487 | 14.9000000  | 15.1000000  | 14.9000000  |
+  | 240  | 12.6924877 | 12.4000000  | 12.4000000  | 12.3000000  |
+  | 429  | 12.6301174 | 12.4000000  | 12.4000000  | 12.3000000  |
+  | 169  | 11.6912976 | 12.4000000  | 12.4000000  | 12.3000000  |
+  | 381  | 12.5948493 | 12.3000000  | 12.3000000  | 12.2000000  |
+  | 60   | 11.8757266 | 12.4000000  | 12.4000000  | 12.3000000  |
 
 ## Conclussion
 
-1. Berdasarkan hasil pengukuran, terdapat 10 kolom atau fitur yang mempengaruhi *Price* yaitu Brand, Battery, Screen_Size, Processor, RAM, Internal_Storage, Rear_Camera, Front_Camera, OS, dan PPI.
-2. Proses preprocessing yang dilakukan adalah dengan melakukan manipulasi data seperti mengabungkan Resolution X dan Resolution Y untuk menghasilkan fitur baru yaitu PPI. Menghapus data yang tidak memiliki korelasi yang signifikan dengan *Price*, dan mengubah format tipe data pada setiap kolom yang memiliki korelasi.
-3. Berdasarkan hasil pengujian model, diperoleh hasil bahwa algoritma GradienBoosting memiliki performa yang paling baik yaitu memiliki nilai RMSE paling kecil dan R2 Score paling besar.
+1. Berdasarkan hasil pengukuran, terdapat 9 kolom atau fitur yang mempengaruhi *Price* yaitu *Brand*, *Model*, *Water Resistance*, *Case Diameter*, *Case Diameter*, *Band Width*, *Dial Color*, *Crystal Material*, dan *Power Reserve*.
+2. Proses preprocessing yang dilakukan adalah dengan melakukan manipulasi data seperti menghapus data yang tidak memiliki korelasi yang signifikan dengan *Price* dan mengubah format tipe data pada setiap kolom yang memiliki korelasi.
+3. Berdasarkan hasil pengujian model, diperoleh hasil bahwa algoritma RandomForestRegressor memiliki performa yang paling baik yaitu memiliki nilai RMSE paling kecil dan R2 Score paling besar.
 4. Meningkatkan performa model dapat dilakukan dengan menambahkan hyperparameter.  Pemilihan hyperparameter yang menghasilkan performa terbaik dapat dilakukan menggunakan teknik Grid Search.
-5. Dataset yang digunakan memiliki rentang jangkauan yang berbeda (imbalace), oleh sebab itu agar performa model lebih baik maka perlu dilakukan teknik SMOTE untuk menangani imbalance dataset.
+5. Dataset yang digunakan memiliki rentang jangkauan yang berbeda (imbalace), oleh sebab itu agar performa model lebih baik maka perlu dilakukan teknik SMOTE (Synthetic Minority Over-sampling Technique). Teknik SMOTE sendiri merupakan salah satu metode oversampling yang digunakan untuk menyeimbangkan dataset yang tidak seimbang. Metode ini menghasilkan sampel sintetis baru untuk kelas minoritas dengan cara menggabungkan fitur-fitur dari data latihan yang sudah ada.
 
 ## Referensi
 
-[1]   APJII, “Laporan Survei Internet APJII 2021 - 2021,” 2022. [Online]. Available: [https://apjii.or.id/survei](https://apjii.or.id/survei).
+[1] Dzakiyyatul Kirom Dalimunthe, dan  Raden Bagus Fajriya Hakim, “Application of Random Forest Algorithm on Watch Price Prediction System Using Framework Flask,” 2023, doi: [Prefix 10.30598/ Crossref](https://ojs3.unpatti.ac.id/index.php/barekeng/).
 
-[2]   S. Subhiksha, S. Thota, and J. Sangeetha, “Prediction of Phone Prices Using machine learning,” 2020, doi: [10.1007/978-981-15-1097-7_65](https://doi.org/10.1007/978-981-15-1097-7_65).
+[2] Soumik Das, Rabin Mazumder, dan Shamindra Nath Sanyal, “AIntention to Purchase Online Luxury Watches Among Indian Consumers in the New Normal Mode,” 2022, doi: [10.1007/978-981-16-4284-5_48](https://doi.org/10.1007/978-981-16-4284-5_48).
 
-[3]   M. Çetın and Y. Koç, “Mobile Phone Price Class Prediction Using Different Classification Algorithms with Feature Selection and Parameter Optimization,” 2021, doi: [10.1109/ISMSIT52890.2021.9604550](https://doi.org/10.1109/ISMSIT52890.2021.9604550).
+[3]   Statista, “Luxury Watch -Indonesia,” 2023. [Online]. Available: https://www.statista.com/outlook/cmo/luxury-goods/luxury-watches-jewelry/luxury-watches/indonesia.
 
-[4]   A. Kalmaz and O. Akin, “Estimation of Mobile Phone Prices with machine learning,” 2022, doi: [10.1109/ICEET56468.2022.10007128](https://doi.org/10.1109/ICEET56468.2022.10007128).
+[4]   J. H. Graw, W. T. Wood, and B. J. Phrampus, “Predicting Global Marine Sediment Density Using the Random Forest Regressor machine learning Algorithm,” *J. Geophys. Res. Solid Earth*, vol. 126, no. 1, pp. 1–14, 2021, doi: [10.1029/2020JB020135](https://doi.org/10.1029/2020JB020135).
 
-[5]  V. Aliyev, “A hands-on explanation of Gradient Boosting Regression,” *medium.com*, 2020. https://vagifaliyev.medium.com/a-hands-on-explanation-of-gradient-boosting-regression-4cfe7cfdf9e (accessed Jun. 03, 2023).
+[5]   Zheng Chu, Jiong Yu, and Askar Hamdulla, “Throughput Prediction based on ExtraTree for Stream Processing Tasks,” 2020, doi: [10.2298/CSIS200131031C](https://doi.org/10.2298/CSIS123456789X).
 
-[6]   J. H. Graw, W. T. Wood, and B. J. Phrampus, “Predicting Global Marine Sediment Density Using the Random Forest Regressor machine learning Algorithm,” *J. Geophys. Res. Solid Earth*, vol. 126, no. 1, pp. 1–14, 2021, doi: [10.1029/2020JB020135](https://doi.org/10.1029/2020JB020135).
-
-[7]   A. Biswal, “Bagging in machine learning: Step to Perform And Its Advantages,” *simplilearn.com*, 2023. https://www.simplilearn.com/tutorials/machine-learning-tutorial/bagging-in-machine-learning (accessed Jun. 03, 2023).
+[6]  V. Aliyev, “A hands-on explanation of Gradient Boosting Regression,” *medium.com*, 2020. https://vagifaliyev.medium.com/a-hands-on-explanation-of-gradient-boosting-regression-4cfe7cfdf9e .
 
 **---Ini adalah bagian akhir laporan---**
