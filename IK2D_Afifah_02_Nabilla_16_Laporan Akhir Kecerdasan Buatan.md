@@ -1,4 +1,4 @@
-# Laporan Akhir Kecerdasan Buatan IK2D
+# Laporan Akhir Kecerdasan Buatan - Kelompok IK2D
 
 **Anggota Kelompok :**
 
@@ -7,31 +7,34 @@
 
 ## Domain Proyek
 
-*Smartphone* di era digital saat ini menjadi barang yang sangat esensial untuk menunjang pembelajaran dan pekerjaan. Menurut data dari Asosiasi Penyelenggara Jasa Internet Indonesia (APJII) tahun 2022 menunjukan bahwa 89,03% penduduk Indonesia memiliki smartphone [1]. Bahkan lebih dari 70% penduduk memiliki *smartphone* lebih dari dua. Harga *smartphone* menjadi parameter yang paling berpengaruh terhadap kecenderungan seseorang membeli *smartphone*. Oleh karena itu kemampuan *machine learning* dalam memprediksi harga *smartphone* menjadi sangat penting untuk masyarakat yang ingin mencari *smartphone* sesuai kebutuhannya.
+Jam tangan merupakan alat yang berfungsi sebagai penunjuk waktu agar manusia selalu tepat waktu dalam melakukan segala sesuatu. Namun di era modern seperti sekarang ini, jam tangan tidak hanya berfungsi sebagai alat penunjuk waktu saja melainkan sudah menjadi trend fashion bagi masyarakat. Masyarakat sangat memperhatikan penampilan dan fashion yang digunakan, belum lagi aksesoris pelengkap untuk menunjang penampilan, oleh karena itu jam tangan hadir untuk memberikan sentuhan dalam menyempurnakan penampilannya dan juga sangat cocok digunakan dalam aktivitas sehari-hari, baik formal maupun informal. Masyarakat juga percaya bahwa menggunakan jam tangan bermerek dapat meningkatkan kualitas penampilan menjadi lebih elegan, menunjukkan kepribadian seseorang, dan menunjukkan kelas sosial seseorang di mata orang lain [1]. 
 
-Terdapat beberapa parameter untuk memprediksi harga *smartphone*. Salah satu parameter tersebut adalah ukuran RAM, ukuran Layar, Prosesor, ukuran memori internal, kapasitas baterai dan sebagainya [2]. Salah satu bidang penelitian machine learning yang didapat digunakan untuk melakukan predikasi adalah regresi. Algoritma regresi dapat memprediksi nilai dari sebuah variabel target berdasarkan nilai dari beberapa variabel input (atau fitur). Terdapat beberapa penelitian terkait prediksi harga *smartphone*. Salah satu diantaranya adalah penelitian yang dilakukan oleh [3] yang memprediksi harga *smartphone* menggunakan beberapa algoritma *machine learning* seperti Random Forest, Logistic Regression, Decision Tree, Linear Discriminant Analysis, K-Nearest Neighbor and SVC. Hasilnya algoritma SVC memiliki akurasi paling baik.
+Harga jam tangan mewah (*luxury watch*) menjadi salah satu parameter yang paling berpengaruh terhadap kecenderungan seseorang membeli *luxury watch*. Oleh karena itu kemampuan *machine learning* dalam memprediksi harga *luxury watch* menjadi sangat penting untuk masyarakat yang ingin mencari jam tangan khususnya *luxury watch* sesuai kebutuhannya. Terdapat beberapa parameter untuk memprediksi harga *luxury watch*. Beberapa parameter tersebut adalah *brand*, *model*, *case material*, *movement type*, *power reserve*, *water resistence* dan sebagainya. 
 
-Selanjutnya penelitian yang dilakukan oleh [4] yang melakukan prediksi harga *smartphone* menggunakan 25 jenis algoritma *machine learning*. Hasil pengujian menunjukan algoritma SVM memiliki akurasi paling besar yaitu 0.9470. Pada proyek ini dilakukan prediksi harga smartphone menggunakan beberapa algoritma machine learning. Sebelum pelatihan model dan evaluasi, terlebih dahulu dilakukan manipulasi data, dan pembersihan data agar model *machine learning* yang dihasilkan memiliki akurasi yang tinggi.
+Salah satu bidang penelitian machine learning yang didapat digunakan untuk melakukan predikasi adalah regresi. Algoritma regresi dapat memprediksi nilai dari sebuah variabel target berdasarkan nilai dari beberapa variabel input (atau fitur). Harga *luxury watch* dapat diprediksi menggunakan beberapa algoritma *machine learning* seperti Random Forest, Linear Regression, Extra Tree, Gradient Boosting, Decision Tree and SVR. Dari beberapa algoritma tersebut, algoritma Random Forest Reression memiliki akurasi paling baik.
+
+Pada proyek ini dilakukan prediksi harga *luxury watch* menggunakan beberapa algoritma machine learning. Sebelum pelatihan model dan evaluasi, terlebih dahulu dilakukan manipulasi data, dan pembersihan data agar model *machine learning* yang dihasilkan memiliki akurasi yang tinggi. Proyek ini akan berfokus pada pembuatan sebuah sistem untuk memprediksi harga *luxury watch*.
 
 ## Business Understanding
 
-Setiap tahun terdapat berbagai jenis tipe *smartphone* dengan fitur yang bermacam-macam. Umumnya *smartphone* tipe tertentu meng-*upgrade* perangkatnya dari segi penambahan ukuran kamera, kapasitas RAM dan memori internal, serta kecepatan prosesor. Penambahan fitur pada *smartphone* akan mempengaruhi kenaikan harga *smartphone* tersebut. Oleh karena itu calon konsumen harus memahami spesifikasi *smartphone* yang akan dibeli disesuaikan dengan budget yang dimiliki. Diperlukan sebuah model *machine learning* yang dapat memprediksi harga *smartphone* dengan akurat. Sehingga calon konsumen dapat menyiapkan budget yang digunakan untuk membeli *smartphone* dengan spesifikasi yang dia diinginkan.
+Jam tangan mewah merupakan produk yang memiliki nilai prestise dan nilai fashion tinggi dalam industri jam tangan. Masyarakat yang tertarik pada jam tangan mewah sering kali mempertimbangkan merek, model, bahan, jenis mekanisme, daya tahan air, dan faktor-faktor lainnya sebelum melakukan pembelian. Namun, harga jam tangan mewah juga menjadi faktor penting yang mempengaruhi keputusan pembelian. Menurut data dari Statista tahun 2023 menunjukan bahwa segmen jam tangan mewah di Indonesia diproyeksikan tumbuh sebesar 3,30% (2023-2028) menghasilkan volume pasar sebesar US$32,59 juta atau setara dengan Rp 472.055 juta pada tahun 2028 [2]. Dalam konteks ini, kemampuan menggunakan *machine learning* untuk memprediksi harga jam tangan mewah menjadi penting bagi calon pembeli yang ingin memperoleh informasi tentang harga yang diharapkan sebelum melakukan pembelian.
 
 #### Problem Statements
 
 Berdasarkan permasalahan yang telah dijelaskan, *problem statements* dari proyek ini adalah sebagai berikut.
 
-1. Fitur-fitur apa saja yang paling berpengaruh terhadap harga *smartphone* ?
-2. Bagaimana proses *Pre-Processing* yang dilakukan agar menghasilkan model *machine learning* yang akurat ?
-3. Bagaimana membuat atau memilih model *machine learning* yang memiliki akurasi terbaik dalam memprediksi harga *smartphone* ?
+1. Fitur-fitur apa saja yang memiliki pengaruh signifikan terhadap penentuan harga jam tangan mewah?
+2. Bagaimana melakukan proses manipulasi data dan pembersihan data agar model *machine learning* yang dihasilkan memiliki akurasi yang tinggi?
+3. Bagaimana memilih atau mengembangkan model *machine learning* yang memberikan prediksi harga jam tangan mewah dengan akurasi terbaik?
 
 #### Goals
 
 Tujuan yang hendak dicapai dari proyek ini adalah sebagai berikut 
 
-1. Mengetahui fitur yang paling berkorelasi dengan penentuan harga *smartphone*.
-2. Membuat model *machine learning* yang dapat memprediksi harga *smartphone*.
-3. Memilih model *machine learning* yang menghasilkan prediksi paling akurat berdasarkan proses *preprocessing* yang dilakukan
+1. Mengidentifikasi fitur-fitur yang memiliki korelasi signifikan dengan harga jam tangan mewah (*luxury watch*).
+2. Mengembangkan model *machine learning* yang dapat memprediksi harga jam tangan mewah (*luxury watch*) dengan akurasi tinggi.
+
+3. Memilih model *machine learning* yang memberikan prediksi harga jam tangan mewah (*luxury watch*) dengan akurasi terbaik melalui proses manipulasi dan pembersihan data yang tepat.
 
 ####  Solution Statements
 
@@ -48,6 +51,20 @@ Solusi yang diajukan untuk menyelesaikan masalah yang telah diuraikan adalah seb
 4. Melakukan pemilihan model terbaik menggunakan LazyPredict
    - Memilih 4 algoritma yang menghasilkan model dengan performa terbaik
    - Perfoma model terbaik dilihat dari skor *Mean Square Error* (MSE), *Root Mean Square Error* (RMSE), dan *R Square* (R2).
+
+
+
+1. Melakukan analisis deskriptif untuk mengidentifikasi fitur-fitur yang memiliki korelasi signifikan dengan harga jam tangan mewah.
+2. Melakukan manipulasi dan pembersihan data, termasuk penggabungan kolom yang berpengaruh terhadap akurasi prediksi harga jam tangan mewah.
+3. Melakukan proses *preprocessing*, seperti:
+   - Memeriksa keberadaan data yang hilang (*missing value*) dan duplikasi data. Jika ada, melakukan penanganan yang sesuai.
+   - Menghapus kolom yang tidak berpengaruh signifikan terhadap prediksi harga jam tangan mewah.
+   - Melakukan visualisasi data untuk memahami persebaran dan korelasi antar kolom.
+   - Membagi data menjadi set pelatihan (*training set*) dan set pengujian (*test set*) dengan proporsi tertentu yaitu prosentase 85% banding 15%. Alasan menggunakan 15% karena jumlah data yang digunakan banyak sehingga hanya dengan 15% sudah didapatkan banyak data tes.
+   - Melakukan *encoding* terhadap kolom kategorikal menggunakan metode yang sesuai, seperti *label encoding* atau *one-hot encoding*.
+4. Melakukan pemilihan model *machine learning* yang memberikan performa terbaik dalam memprediksi harga jam tangan mewah menggunakan LazyPredict. 
+   - Memilih 3 algoritma yang menghasilkan model *machine learning* terbaik. Pemilihan model dapat dilakukan dengan melakukan pelatihan dan evaluasi model menggunakan beberapa algoritma *machine learning* seperti Random Forest Regression, Linear Regression, Extra Trees, Gradient Boosting, Decision Tree, dan SVR. 
+   - Performa model akan dievaluasi berdasarkan metrik evaluasi yang relevan, seperti Mean Squared Error (MSE), Root Mean Squared Error (RMSE), dan R-squared (R2).
 
 ## Data Understanding
 
