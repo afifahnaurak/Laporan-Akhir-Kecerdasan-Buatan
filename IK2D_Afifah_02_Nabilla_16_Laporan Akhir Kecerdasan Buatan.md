@@ -1,4 +1,4 @@
-# Laporan Akhir Kecerdasan Buatan
+# Laporan Akhir Kecerdasan Buatan IK2D
 
 **Anggota Kelompok :**
 
