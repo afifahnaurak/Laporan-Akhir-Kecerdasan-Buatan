@@ -194,13 +194,13 @@ Pada tahap ini dilakukan proses pelatihan untuk mendapatkan model dengan perform
 
    - **ExtraTreeRegressor**
 
-     BaggingRegressor adalah algoritma pemodelan yang digunakan dalam pembelajaran mesin untuk memprediksi variabel target berkelanjutan. Ini adalah metode ensambel yang menggabungkan beberapa model regresi (misalnya, Regresi Linier, DecisionTreeRegressor) untuk membuat model yang lebih kuat. Pada dasarnya, algoritma BaggingRegressor bekerja dengan membuat beberapa model regresi yang berbeda menggunakan subset acak dari data pelatihan. Setiap model regresi dibangun secara independen dan tidak saling bergantung satu sama lain. Ketika melakukan prediksi, hasil dari semua model regresi digabungkan untuk menghasilkan prediksi akhir dengan menggunakan rata-rata atau mayoritas suara (tergantung pada jenis variabel target). Ilustrasi dari cara kerja BaggingRegressor ditunjukan pada Gambar 4.
+     Extra Tree Regression, atau disebut juga Extreme Tree Regression, adalah sebuah algoritma pembelajaran mesin yang digunakan untuk melakukan regresi, yaitu memprediksi nilai kontinu berdasarkan fitur-fitur yang ada. Algoritma ini merupakan variasi dari algoritma ExtraTree (pohon tambahan) yang telah dijelaskan sebelumnya. Extra Tree Regression mengadopsi pendekatan ensemble learning dengan membangun sejumlah besar pohon keputusan yang tidak terkorelasi secara acak. Pada setiap simpul pemisahan pohon, algoritma menggunakan pendekatan yang acak untuk memilih fitur-fitur yang digunakan untuk membagi data. Kemudian, algoritma memilih pemisahan dengan nilai yang optimal secara acak dari subset nilai yang dipilih untuk membagi data pada simpul tersebut. Ilustrasi dari cara kerja BaggingRegressor ditunjukan pada Gambar 4.
 
-   <img src="https://afandistudio.net/prak_ai/BaggingRegressor.png" style="zoom:50%;" />
+   <img src="https://github.com/afifahnaurak/Laporan-Akhir-Kecerdasan-Buatan/assets/116862851/4b7cff84-efd7-4869-9e9d-ba8d6511d26a" style="zoom:50%;" />
 
-   <div style="text-align:center">Gambar 4. Ilustrasi BaggingRegressor [7]</div>
+   <div style="text-align:center">Gambar 4. Ilustrasi ExtraTreeRegressor [6]</div>
 
-   Namun, BaggingRegressor tidak memberikan interpretasi model yang langsung seperti Regresi Linier. Selain itu, dalam beberapa kasus, jika terdapat korelasi yang kuat antara fitur, BaggingRegressor mungkin tidak memberikan peningkatan yang signifikan dalam kinerja prediksi dibandingkan dengan model regresi tunggal.
+   Dibandingkan dengan algoritma random forest, algoritma ini memiliki efisiensi komputasi yang lebih tinggi dan akurasi yang lebih tinggi. Algoritma ExtraTree sangat mirip dengan algoritma random forest. Meskipun keduanya terdiri dari beberapa decision tree, ExtraTree dan random forest memiliki dua perbedaan. pertama, random forest menggunakan algoritma Bagging, yang berarti sampel pelatihan untuk setiap weak learner tidak semuanya, tetapi ExtraTree menggunakan semua sampel pelatihan untuk melatih setiap weak learner. Selain itu, ExtraTree mengadopsi strategi pemilihan acak untuk memilih fitur, sehingga hasilnya lebih baik daripada random forest. kedua, random forest mendapatkan atribut bifurkasi terbaik dalam subset acak, tetapi ExtraTree mendapatkan nilai bifurkasi secara sepenuhnya acak untuk melaksanakan bifurkasi pohon keputusan.
 
    - **GradientBoostingRegressor**
 
@@ -310,7 +310,7 @@ Pada tahap ini dilakukan proses pelatihan untuk mendapatkan model dengan perform
 2. Proses preprocessing yang dilakukan adalah dengan melakukan manipulasi data seperti menghapus data yang tidak memiliki korelasi yang signifikan dengan *Price* dan mengubah format tipe data pada setiap kolom yang memiliki korelasi.
 3. Berdasarkan hasil pengujian model, diperoleh hasil bahwa algoritma RandomForestRegressor memiliki performa yang paling baik yaitu memiliki nilai RMSE paling kecil dan R2 Score paling besar.
 4. Meningkatkan performa model dapat dilakukan dengan menambahkan hyperparameter.  Pemilihan hyperparameter yang menghasilkan performa terbaik dapat dilakukan menggunakan teknik Grid Search.
-5. Dataset yang digunakan memiliki rentang jangkauan yang berbeda (imbalace), oleh sebab itu agar performa model lebih baik maka perlu dilakukan teknik SMOTE untuk menangani imbalance dataset.
+5. Dataset yang digunakan memiliki rentang jangkauan yang berbeda (imbalace), oleh sebab itu agar performa model lebih baik maka perlu dilakukan teknik SMOTE (Synthetic Minority Over-sampling Technique). Teknik SMOTE sendiri merupakan salah satu metode oversampling yang digunakan untuk menyeimbangkan dataset yang tidak seimbang. Metode ini menghasilkan sampel sintetis baru untuk kelas minoritas dengan cara menggabungkan fitur-fitur dari data latihan yang sudah ada.
 
 ## Referensi
 
@@ -324,8 +324,9 @@ Pada tahap ini dilakukan proses pelatihan untuk mendapatkan model dengan perform
 
 [5]  V. Aliyev, “A hands-on explanation of Gradient Boosting Regression,” *medium.com*, 2020. https://vagifaliyev.medium.com/a-hands-on-explanation-of-gradient-boosting-regression-4cfe7cfdf9e (accessed Jun. 03, 2023).
 
-[6]   J. H. Graw, W. T. Wood, and B. J. Phrampus, “Predicting Global Marine Sediment Density Using the Random Forest Regressor machine learning Algorithm,” *J. Geophys. Res. Solid Earth*, vol. 126, no. 1, pp. 1–14, 2021, doi: [10.1029/2020JB020135](https://doi.org/10.1029/2020JB020135).
+[7]   J. H. Graw, W. T. Wood, and B. J. Phrampus, “Predicting Global Marine Sediment Density Using the Random Forest Regressor machine learning Algorithm,” *J. Geophys. Res. Solid Earth*, vol. 126, no. 1, pp. 1–14, 2021, doi: [10.1029/2020JB020135](https://doi.org/10.1029/2020JB020135).
 
-[7]   A. Biswal, “Bagging in machine learning: Step to Perform And Its Advantages,” *simplilearn.com*, 2023. https://www.simplilearn.com/tutorials/machine-learning-tutorial/bagging-in-machine-learning (accessed Jun. 03, 2023).
+[6]   Zheng Chu, Jiong Yu, and Askar Hamdulla, “Throughput Prediction based on ExtraTree for Stream
+Processing Tasks,” 2020, doi: [10.2298/CSIS200131031C](https://doi.org/10.2298/CSIS123456789X).
 
 **---Ini adalah bagian akhir laporan---**
