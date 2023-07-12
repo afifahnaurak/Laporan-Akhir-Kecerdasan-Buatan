@@ -40,20 +40,6 @@ Tujuan yang hendak dicapai dari proyek ini adalah sebagai berikut
 
 Solusi yang diajukan untuk menyelesaikan masalah yang telah diuraikan adalah sebagai berikut.
 
-1. Melakukan analisis deskriptif untuk mengetahui pola dan informasi yang tersimpan di data mengenai fitur atau spesifikasi yang mempengaruhi harga *smartphone*.
-2. Melakukan proses *Data Manipulation* untuk menggabungkan kolom-kolom yang berpengaruh terhadap akurasi predisi harga *smartphone* 
-3. Melakukan  Proses *Preprocessing* seperti :
-   - Mengecek *missing value* dan duplikasi data. Kebetulan dataset yang digunakan tidak ada *missing value* dan duplikasi data.
-   - Menghapus kolom yang tidak berpengaruh terhadap prediksi harga
-   - Melakukan visualisasi data untuk melihat persebaran dan korelasi antar kolom
-   - Membagi data menjadi *training* dan *test set*, dengan prosentase 85% banding 15%. Alasan menggunakan 15% karena jumlah data yang digunakan banyak, jadi hanya dengan 15% sudah didapatkan banyak data tes.
-   - Melakukan *Encoding* terhadap kolom yang bertipe objek / kategorikal menggunakan fungsi `Map`.
-4. Melakukan pemilihan model terbaik menggunakan LazyPredict
-   - Memilih 4 algoritma yang menghasilkan model dengan performa terbaik
-   - Perfoma model terbaik dilihat dari skor *Mean Square Error* (MSE), *Root Mean Square Error* (RMSE), dan *R Square* (R2).
-
-
-
 1. Melakukan analisis deskriptif untuk mengidentifikasi fitur-fitur yang memiliki korelasi signifikan dengan harga jam tangan mewah.
 2. Melakukan manipulasi dan pembersihan data, termasuk penggabungan kolom yang berpengaruh terhadap akurasi prediksi harga jam tangan mewah.
 3. Melakukan proses *preprocessing*, seperti:
