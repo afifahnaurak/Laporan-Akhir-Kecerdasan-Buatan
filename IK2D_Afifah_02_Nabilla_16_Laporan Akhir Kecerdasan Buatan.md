@@ -1,4 +1,4 @@
-# Laporan Akhir Kecerdasan Buatan - Kelompok IK2D tes
+# Laporan Akhir Kecerdasan Buatan - Kelompok IK2D
 
 **Anggota Kelompok :**
 
@@ -7,7 +7,7 @@
 
 ## Domain Proyek
 
-Jam tangan merupakan alat yang berfungsi sebagai penunjuk waktu agar manusia selalu tepat waktu dalam melakukan segala sesuatu. Namun di era modern seperti sekarang ini, jam tangan tidak hanya berfungsi sebagai alat penunjuk waktu saja melainkan sudah menjadi trend fashion bagi masyarakat. Masyarakat sangat memperhatikan penampilan dan fashion yang digunakan, belum lagi aksesoris pelengkap untuk menunjang penampilan, oleh karena itu jam tangan hadir untuk memberikan sentuhan dalam menyempurnakan penampilannya dan juga sangat cocok digunakan dalam aktivitas sehari-hari, baik formal maupun informal. Masyarakat juga percaya bahwa menggunakan jam tangan bermerek dapat meningkatkan kualitas penampilan menjadi lebih elegan, menunjukkan kepribadian seseorang, dan menunjukkan kelas sosial seseorang di mata orang lain [1]. 
+Jam tangan merupakan alat yang berfungsi sebagai penunjuk waktu agar manusia selalu tepat waktu dalam melakukan segala sesuatu. Namun di era modern seperti sekarang ini, jam tangan tidak hanya berfungsi sebagai alat penunjuk waktu saja melainkan sudah menjadi trend fashion bagi masyarakat [1]. Masyarakat sangat memperhatikan penampilan dan fashion yang digunakan, belum lagi aksesoris pelengkap untuk menunjang penampilan, oleh karena itu jam tangan hadir untuk memberikan sentuhan dalam menyempurnakan penampilannya dan juga sangat cocok digunakan dalam aktivitas sehari-hari, baik formal maupun informal. Masyarakat juga percaya bahwa menggunakan jam tangan bermerek dapat meningkatkan kualitas penampilan menjadi lebih elegan, menunjukkan kepribadian seseorang, dan menunjukkan kelas sosial seseorang di mata orang lain [2]. 
 
 Harga jam tangan mewah (*luxury watch*) menjadi salah satu parameter yang paling berpengaruh terhadap kecenderungan seseorang membeli *luxury watch*. Oleh karena itu kemampuan *machine learning* dalam memprediksi harga *luxury watch* menjadi sangat penting untuk masyarakat yang ingin mencari jam tangan khususnya *luxury watch* sesuai kebutuhannya. Terdapat beberapa parameter untuk memprediksi harga *luxury watch*. Beberapa parameter tersebut adalah *brand*, *model*, *case material*, *movement type*, *power reserve*, *water resistence* dan sebagainya. 
 
@@ -17,7 +17,7 @@ Pada proyek ini dilakukan prediksi harga *luxury watch* menggunakan beberapa alg
 
 ## Business Understanding
 
-Jam tangan mewah merupakan produk yang memiliki nilai prestise dan nilai fashion tinggi dalam industri jam tangan. Masyarakat yang tertarik pada jam tangan mewah sering kali mempertimbangkan merek, model, bahan, jenis mekanisme, daya tahan air, dan faktor-faktor lainnya sebelum melakukan pembelian. Namun, harga jam tangan mewah juga menjadi faktor penting yang mempengaruhi keputusan pembelian. Menurut data dari Statista tahun 2023 menunjukan bahwa segmen jam tangan mewah di Indonesia diproyeksikan tumbuh sebesar 3,30% (2023-2028) menghasilkan volume pasar sebesar US$32,59 juta atau setara dengan Rp 472.055 juta pada tahun 2028 [2]. Dalam konteks ini, kemampuan menggunakan *machine learning* untuk memprediksi harga jam tangan mewah menjadi penting bagi calon pembeli yang ingin memperoleh informasi tentang harga yang diharapkan sebelum melakukan pembelian.
+Jam tangan mewah merupakan produk yang memiliki nilai prestise dan nilai fashion tinggi dalam industri jam tangan. Masyarakat yang tertarik pada jam tangan mewah sering kali mempertimbangkan merek, model, bahan, jenis mekanisme, daya tahan air, dan faktor-faktor lainnya sebelum melakukan pembelian. Namun, harga jam tangan mewah juga menjadi faktor penting yang mempengaruhi keputusan pembelian. Menurut data dari Statista tahun 2023 menunjukan bahwa segmen jam tangan mewah di Indonesia diproyeksikan tumbuh sebesar 3,30% (2023-2028) menghasilkan volume pasar sebesar US$32,59 juta atau setara dengan Rp 472.055 juta pada tahun 2028 [3]. Dalam konteks ini, kemampuan menggunakan *machine learning* untuk memprediksi harga jam tangan mewah menjadi penting bagi calon pembeli yang ingin memperoleh informasi tentang harga yang diharapkan sebelum melakukan pembelian.
 
 #### Problem Statements
 
@@ -190,7 +190,7 @@ Pada tahap ini dilakukan proses pelatihan untuk mendapatkan model dengan perform
 
      <img src="https://afandistudio.net/prak_ai/RFRegression.jpg" style="zoom: 25%;" />
 
-     <div style="text-align:center">Gambar 3. Ilustrasi RandomForestRegressor [6]</div>
+     <div style="text-align:center">Gambar 3. Ilustrasi RandomForestRegressor [4]</div>
 
    - **ExtraTreeRegressor**
 
@@ -198,7 +198,7 @@ Pada tahap ini dilakukan proses pelatihan untuk mendapatkan model dengan perform
 
    <img src="https://github.com/afifahnaurak/Laporan-Akhir-Kecerdasan-Buatan/assets/116862851/4b7cff84-efd7-4869-9e9d-ba8d6511d26a" style="zoom:50%;" />
 
-   <div style="text-align:center">Gambar 4. Ilustrasi ExtraTreeRegressor [6]</div>
+   <div style="text-align:center">Gambar 4. Ilustrasi ExtraTreeRegressor [5]</div>
 
    Dibandingkan dengan algoritma random forest, algoritma ini memiliki efisiensi komputasi yang lebih tinggi dan akurasi yang lebih tinggi. Algoritma ExtraTree sangat mirip dengan algoritma random forest. Meskipun keduanya terdiri dari beberapa decision tree, ExtraTree dan random forest memiliki dua perbedaan. pertama, random forest menggunakan algoritma Bagging, yang berarti sampel pelatihan untuk setiap weak learner tidak semuanya, tetapi ExtraTree menggunakan semua sampel pelatihan untuk melatih setiap weak learner. Selain itu, ExtraTree mengadopsi strategi pemilihan acak untuk memilih fitur, sehingga hasilnya lebih baik daripada random forest. kedua, random forest mendapatkan atribut bifurkasi terbaik dalam subset acak, tetapi ExtraTree mendapatkan nilai bifurkasi secara sepenuhnya acak untuk melaksanakan bifurkasi pohon keputusan.
 
@@ -208,7 +208,7 @@ Pada tahap ini dilakukan proses pelatihan untuk mendapatkan model dengan perform
 
      ![](https://afandistudio.net/prak_ai/GradienRegression.png)
 
-     <div style="text-align:center">Gambar 5. Ilustrasi GradienBoostingRegressor [5]</div>
+     <div style="text-align:center">Gambar 5. Ilustrasi GradienBoostingRegressor [6]</div>
 
 5. Menambahkan parameter tunning untuk mengingkatkan performa model
 
@@ -306,7 +306,7 @@ Pada tahap ini dilakukan proses pelatihan untuk mendapatkan model dengan perform
 
 ## Conclussion
 
-1. Berdasarkan hasil pengukuran, terdapat 9 kolom atau fitur yang mempengaruhi *Price* yaitu Brand, Model, Water Resistance, Case Diameter, Case Diameter, Band Width, Dial Color, Crystal Material, dan Crystal Material.
+1. Berdasarkan hasil pengukuran, terdapat 9 kolom atau fitur yang mempengaruhi *Price* yaitu *Brand*, *Model*, *Water Resistance*, *Case Diameter*, *Case Diameter*, *Band Width*, *Dial Color*, *Crystal Material*, dan *Power Reserve*.
 2. Proses preprocessing yang dilakukan adalah dengan melakukan manipulasi data seperti menghapus data yang tidak memiliki korelasi yang signifikan dengan *Price* dan mengubah format tipe data pada setiap kolom yang memiliki korelasi.
 3. Berdasarkan hasil pengujian model, diperoleh hasil bahwa algoritma RandomForestRegressor memiliki performa yang paling baik yaitu memiliki nilai RMSE paling kecil dan R2 Score paling besar.
 4. Meningkatkan performa model dapat dilakukan dengan menambahkan hyperparameter.  Pemilihan hyperparameter yang menghasilkan performa terbaik dapat dilakukan menggunakan teknik Grid Search.
@@ -314,19 +314,16 @@ Pada tahap ini dilakukan proses pelatihan untuk mendapatkan model dengan perform
 
 ## Referensi
 
-[1]   APJII, “Laporan Survei Internet APJII 2021 - 2021,” 2022. [Online]. Available: [https://apjii.or.id/survei](https://apjii.or.id/survei).
+[1] Dzakiyyatul Kirom Dalimunthe, dan  Raden Bagus Fajriya Hakim, “Application of Random Forest Algorithm on Watch Price Prediction System Using Framework Flask,” 2023, doi: [Prefix 10.30598/ Crossref](https://ojs3.unpatti.ac.id/index.php/barekeng/).
 
-[2]   S. Subhiksha, S. Thota, and J. Sangeetha, “Prediction of Phone Prices Using machine learning,” 2020, doi: [10.1007/978-981-15-1097-7_65](https://doi.org/10.1007/978-981-15-1097-7_65).
+[2] Soumik Das, Rabin Mazumder, dan Shamindra Nath Sanyal, “AIntention to Purchase Online Luxury Watches Among Indian Consumers in the New Normal Mode,” 2022, doi: [10.1007/978-981-16-4284-5_48](https://doi.org/10.1007/978-981-16-4284-5_48).
 
-[3]   M. Çetın and Y. Koç, “Mobile Phone Price Class Prediction Using Different Classification Algorithms with Feature Selection and Parameter Optimization,” 2021, doi: [10.1109/ISMSIT52890.2021.9604550](https://doi.org/10.1109/ISMSIT52890.2021.9604550).
+[3]   Statista, “Luxury Watch -Indonesia,” 2023. [Online]. Available: https://www.statista.com/outlook/cmo/luxury-goods/luxury-watches-jewelry/luxury-watches/indonesia.
 
-[4]   A. Kalmaz and O. Akin, “Estimation of Mobile Phone Prices with machine learning,” 2022, doi: [10.1109/ICEET56468.2022.10007128](https://doi.org/10.1109/ICEET56468.2022.10007128).
+[4]   J. H. Graw, W. T. Wood, and B. J. Phrampus, “Predicting Global Marine Sediment Density Using the Random Forest Regressor machine learning Algorithm,” *J. Geophys. Res. Solid Earth*, vol. 126, no. 1, pp. 1–14, 2021, doi: [10.1029/2020JB020135](https://doi.org/10.1029/2020JB020135).
 
-[5]  V. Aliyev, “A hands-on explanation of Gradient Boosting Regression,” *medium.com*, 2020. https://vagifaliyev.medium.com/a-hands-on-explanation-of-gradient-boosting-regression-4cfe7cfdf9e (accessed Jun. 03, 2023).
+[5]   Zheng Chu, Jiong Yu, and Askar Hamdulla, “Throughput Prediction based on ExtraTree for Stream Processing Tasks,” 2020, doi: [10.2298/CSIS200131031C](https://doi.org/10.2298/CSIS123456789X).
 
-[7]   J. H. Graw, W. T. Wood, and B. J. Phrampus, “Predicting Global Marine Sediment Density Using the Random Forest Regressor machine learning Algorithm,” *J. Geophys. Res. Solid Earth*, vol. 126, no. 1, pp. 1–14, 2021, doi: [10.1029/2020JB020135](https://doi.org/10.1029/2020JB020135).
-
-[6]   Zheng Chu, Jiong Yu, and Askar Hamdulla, “Throughput Prediction based on ExtraTree for Stream
-Processing Tasks,” 2020, doi: [10.2298/CSIS200131031C](https://doi.org/10.2298/CSIS123456789X).
+[6]  V. Aliyev, “A hands-on explanation of Gradient Boosting Regression,” *medium.com*, 2020. https://vagifaliyev.medium.com/a-hands-on-explanation-of-gradient-boosting-regression-4cfe7cfdf9e .
 
 **---Ini adalah bagian akhir laporan---**
