@@ -110,7 +110,7 @@ Teknik data preparation yang dilakukan pada proyek ini adalah sebagai berikut :
 
 2. Data Splitting: Membagi dataset menjadi data latih dan data uji. Pada proyek ini perbandingan data latih dan data uji adalah 85 : 15.
 
-3. Menampilkan informasi jumlah data latih dan data uji. Jumlah data latih adalah 1155, sedangkan data uji terdat 204 data. jumlah data fitur yang dipakai untuk pelatihan adalah 10.
+3. Menampilkan informasi jumlah data latih dan data uji. Jumlah data latih adalah 402, sedangkan data uji terdat 72 data. jumlah data fitur yang dipakai untuk pelatihan adalah 9.
 
    
 
@@ -127,31 +127,32 @@ Pada tahap ini dilakukan proses pelatihan untuk mendapatkan model dengan perform
 
    | Model                         | Adjusted R-Squared | R-Squared | RMSE | Time Taken |
    | ----------------------------- | ------------------ | --------- | ---- | ---------- |
-   | GradientBoostingRegressor     | 0.71               | 0.72      | 0.40 | 0.53       |
-   | RandomForestRegressor         | 0.70               | 0.72      | 0.40 | 0.53       |
-   | BaggingRegressor              | 0.69               | 0.71      | 0.41 | 0.07       |
-   | SVR                           | 0.69               | 0.70      | 0.41 | 0.14       |
-   | NuSVR                         | 0.69               | 0.70      | 0.41 | 0.26       |
-   | LGBMRegressor                 | 0.68               | 0.70      | 0.42 | 0.10       |
-   | HistGradientBoostingRegressor | 0.68               | 0.69      | 0.42 | 1.16       |
-   | LassoLarsIC                   | 0.66               | 0.68      | 0.43 | 0.04       |
-   | LassoCV                       | 0.66               | 0.68      | 0.43 | 0.17       |
-   | LarsCV                        | 0.66               | 0.68      | 0.43 | 0.07       |
-   | LassoLarsCV                   | 0.66               | 0.68      | 0.43 | 0.08       |
-   | HuberRegressor                | 0.66               | 0.68      | 0.43 | 0.10       |
-   | ElasticNetCV                  | 0.66               | 0.68      | 0.43 | 0.17       |
-   | Lars                          | 0.66               | 0.67      | 0.43 | 0.03       |
-   | LinearRegression              | 0.66               | 0.67      | 0.43 | 0.02       |
-   | TransformedTargetRegressor    | 0.66               | 0.67      | 0.43 | 0.02       |
-   | RidgeCV                       | 0.66               | 0.67      | 0.43 | 0.03       |
-   | Ridge                         | 0.66               | 0.67      | 0.43 | 0.02       |
-   | BayesianRidge                 | 0.66               | 0.67      | 0.43 | 0.04       |
+   | RandomForestRegressor         | 0.78               | 0.81      | 0.34 | 0.31       |
+   | ExtraTreeRegressor            | 0.78               | 0.81      | 0.34 | 0.04       |
+   | GradientBoostingRegressor     | 0.76               | 0.79      | 0.36 | 0.13       |
+   | BaggingRegressor              | 0.75               | 0.78      | 0.36 | 0.07       |
+   | XGBRegressor                  | 0.73               | 0.77      | 0.37 | 0.14       |
+   | HistGradientBoostingRegressor | 0.73               | 0.76      | 0.38 | 0.38       |
+   | ExtraTreesRegressor           | 0.72               | 0.76      | 0.38 | 0.24       |
+   | LGBMRegressor                 | 0.70               | 0.73      | 0.40 | 0.08       |
+   | AdaBoostRegressor             | 0.58               | 0.63      | 0.47 | 0.19       |
+   | DecisionTreeRegressor         | 0.55               | 0.61      | 0.48 | 0.03       |
+   | KNeighborsRegressor           | 0.46               | 0.53      | 0.53 | 0.03       |
+   | SVR                           | 0.32               | 0.41      | 0.59 | 0.05       |
+   | NuSVR                         | 0.32               | 0.40      | 0.60 | 0.06       |
+   | TransformedTargetRegressor    | 0.17               | 0.27      | 0.66 | 0.03       |
+   | LinearRegression              | 0.17               | 0.27      | 0.66 | 0.03       |
+   | RidgeCV                       | 0.17               | 0.27      | 0.66 | 0.03       |
+   | ElasticNetCV                  | 0.16               | 0.27      | 0.66 | 0.18       |
+   | Ridge                         | 0.16               | 0.27      | 0.66 | 0.03       |
+   | BayesianRidge                 | 0.15               | 0.26      | 0.66 | 0.09       |
+   | LassoCV                       | 0.15               | 0.26      | 0.66 | 0.13       |
 
-   Algoritma dengan performa terbaik dilihat dari nilai R-Square dan RMSE. Semakin besar nilai R-Square (mendekati 1) maka model semakin akurat. Sedangkan pada RMSE, apabila nilai semain kecil (mendekati 0), maka akurasi model akan semakin tinggi. Berdasarkan hasil R-Square dan RMSE menggunakan Lazy Predict pada Tabel 1, disimpulkan bahwa 3 algoritma terbaik yang akan digunakan untuk mempredikasi harga adalah **GradientBoostingRegressor**, **RandomForestRegressor**, dan **BaggingRegressor**.
+   Algoritma dengan performa terbaik dilihat dari nilai R-Square dan RMSE. Semakin besar nilai R-Square (mendekati 1) maka model semakin akurat. Sedangkan pada RMSE, apabila nilai semain kecil (mendekati 0), maka akurasi model akan semakin tinggi. Berdasarkan hasil R-Square dan RMSE menggunakan Lazy Predict pada Tabel 1, disimpulkan bahwa 3 algoritma terbaik yang akan digunakan untuk mempredikasi harga adalah **RandomForestRegressor**, **ExtraTreeRegressor**, dan **GradientBoostingRegressor**.
 
 2. Menggunakan `ColumnTransformer` untuk mengubah data kategorik menjadi numerik
 
-   Pada proyek ini masih mempertahankan kolom kategorikal yaitu Brand dan OS. Sebab pada saat ingin mempredikasi harga smartphone, calon pembeli tentunya akan memilih Brand dan OS dalam bentuk kategori bukan numerik. Oleh karena itu kita ubah data kategorik menjadi numberik menggunkan teknik OneHotEncoding. Tapi sebelum dilakukan teknik `OneHotEncoding` dilakukan harus menampilkan indeks dari masing-masing kolom menggunakan fungsi `enumerate()`. Brand berada di indeks 0, dan OS berada di index 9. Selanjutkan dilakukan proses `ColumnTransformer`.
+   Pada proyek ini masih mempertahankan kolom kategorikal yaitu *Brand* dan *Power Reserve*. Sebab pada saat ingin mempredikasi harga *luxury brand*, calon pembeli tentunya akan memilih *Brand* dan *Power Reserve* dalam bentuk kategori bukan numerik. Oleh karena itu kita ubah data kategorik menjadi numberik menggunkan teknik OneHotEncoding. Tapi sebelum dilakukan teknik `OneHotEncoding` dilakukan harus menampilkan indeks dari masing-masing kolom menggunakan fungsi `enumerate()`. *Brand* berada di indeks 0, dan *Power Reserve* berada di index 8. Selanjutkan dilakukan proses `ColumnTransformer`.
 
 3. Membuat pipeline untuk menggabungkan data numerik dan kategorik
 
