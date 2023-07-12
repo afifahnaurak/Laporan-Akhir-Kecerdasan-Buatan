@@ -23,9 +23,9 @@ Jam tangan mewah merupakan produk yang memiliki nilai prestise dan nilai fashion
 
 Berdasarkan permasalahan yang telah dijelaskan, *problem statements* dari proyek ini adalah sebagai berikut.
 
-1. Fitur-fitur apa saja yang memiliki pengaruh signifikan terhadap penentuan harga jam tangan mewah?
+1. Fitur-fitur apa saja yang memiliki pengaruh signifikan terhadap penentuan harga jam tangan mewah (*luxury watch*)?
 2. Bagaimana melakukan proses manipulasi data dan pembersihan data agar model *machine learning* yang dihasilkan memiliki akurasi yang tinggi?
-3. Bagaimana memilih atau mengembangkan model *machine learning* yang memberikan prediksi harga jam tangan mewah dengan akurasi terbaik?
+3. Bagaimana memilih atau mengembangkan model *machine learning* yang memberikan prediksi harga jam tangan mewah (*luxury watch*) dengan akurasi terbaik?
 
 #### Goals
 
