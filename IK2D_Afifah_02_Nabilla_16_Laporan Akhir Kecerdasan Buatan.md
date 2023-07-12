@@ -1,4 +1,4 @@
-# Laporan Akhir Kecerdasan Buatan - Kelompok 1
+# Laporan Akhir Kecerdasan Buatan
 
 **Anggota Kelompok :**
 
