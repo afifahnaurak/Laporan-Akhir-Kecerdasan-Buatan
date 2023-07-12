@@ -184,14 +184,6 @@ Pada tahap ini dilakukan proses pelatihan untuk mendapatkan model dengan perform
 
    Setelah dilakukan proses pelatihan oleh Lazy Predict, diperoleh 3 algoritma dengan performa terbaik yaitu :
 
-   - **GradientBoostingRegressor**
-
-     GradientBoostingRegressor adalah algoritma pemodelan yang digunakan dalam pembelajaran mesin untuk memprediksi variabel target berkelanjutan. Ini adalah metode ensambel yang menggabungkan beberapa pohon keputusan untuk membuat model yang lebih kuat. Algoritma GradientBoostingRegressor bekerja dengan menggabungkan banyak pohon keputusan sederhana. Setiap pohon yang ditambahkan ke model berusaha untuk memperbaiki kesalahan prediksi yang dihasilkan oleh pohon sebelumnya. Algoritma ini bekerja dengan cara mengoptimalkan gradien fungsi kerugian (misalnya, *Mean Squared Error*) menggunakan proses iteratif. Ilustrasi dari cara kerja GradienBoostingRegressor ditunjukan pada Gambar 2.
-
-     ![](https://afandistudio.net/prak_ai/GradienRegression.png)
-
-     <div style="text-align:center">Gambar 2. Ilustrasi GradienBoostingRegressor [5]</div>
-
    - **RandomForestRegressor**
 
      RandomForestRegressor adalah algoritma pemodelan yang digunakan dalam pembelajaran mesin untuk memprediksi variabel target berkelanjutan. Ini adalah metode ensambel yang menggabungkan beberapa pohon keputusan acak (*random decision trees*) untuk membuat model yang lebih kuat. Pada dasarnya, algoritma RandomForestRegressor bekerja dengan menggabungkan hasil dari banyak pohon keputusan acak yang diberi bobot yang sama. Setiap pohon keputusan acak dibangun dengan menggunakan subset acak dari data pelatihan dan subset acak dari fitur (variabel independen). Proses ini dikenal sebagai bootstrap aggregating atau biasa disebut juga sebagai "bagging". Ilustrasi dari cara kerja RandomForestRegressor ditunjukan pada Gambar 3.
@@ -200,44 +192,49 @@ Pada tahap ini dilakukan proses pelatihan untuk mendapatkan model dengan perform
 
      <div style="text-align:center">Gambar 3. Ilustrasi RandomForestRegressor [6]</div>
 
-   - **BaggingRegressor**
+   - **ExtraTreeRegressor**
 
      BaggingRegressor adalah algoritma pemodelan yang digunakan dalam pembelajaran mesin untuk memprediksi variabel target berkelanjutan. Ini adalah metode ensambel yang menggabungkan beberapa model regresi (misalnya, Regresi Linier, DecisionTreeRegressor) untuk membuat model yang lebih kuat. Pada dasarnya, algoritma BaggingRegressor bekerja dengan membuat beberapa model regresi yang berbeda menggunakan subset acak dari data pelatihan. Setiap model regresi dibangun secara independen dan tidak saling bergantung satu sama lain. Ketika melakukan prediksi, hasil dari semua model regresi digabungkan untuk menghasilkan prediksi akhir dengan menggunakan rata-rata atau mayoritas suara (tergantung pada jenis variabel target). Ilustrasi dari cara kerja BaggingRegressor ditunjukan pada Gambar 4.
 
-     <img src="https://afandistudio.net/prak_ai/BaggingRegressor.png" style="zoom:50%;" />
+   <img src="https://afandistudio.net/prak_ai/BaggingRegressor.png" style="zoom:50%;" />
 
-     <div style="text-align:center">Gambar 4. Ilustrasi BaggingRegressor [7]</div>
+   <div style="text-align:center">Gambar 4. Ilustrasi BaggingRegressor [7]</div>
 
-     Namun, BaggingRegressor tidak memberikan interpretasi model yang langsung seperti Regresi Linier. Selain itu, dalam beberapa kasus, jika terdapat korelasi yang kuat antara fitur, BaggingRegressor mungkin tidak memberikan peningkatan yang signifikan dalam kinerja prediksi dibandingkan dengan model regresi tunggal.
+   Namun, BaggingRegressor tidak memberikan interpretasi model yang langsung seperti Regresi Linier. Selain itu, dalam beberapa kasus, jika terdapat korelasi yang kuat antara fitur, BaggingRegressor mungkin tidak memberikan peningkatan yang signifikan dalam kinerja prediksi dibandingkan dengan model regresi tunggal.
+
+   - **GradientBoostingRegressor**
+
+     GradientBoostingRegressor adalah algoritma pemodelan yang digunakan dalam pembelajaran mesin untuk memprediksi variabel target berkelanjutan. Ini adalah metode ensambel yang menggabungkan beberapa pohon keputusan untuk membuat model yang lebih kuat. Algoritma GradientBoostingRegressor bekerja dengan menggabungkan banyak pohon keputusan sederhana. Setiap pohon yang ditambahkan ke model berusaha untuk memperbaiki kesalahan prediksi yang dihasilkan oleh pohon sebelumnya. Algoritma ini bekerja dengan cara mengoptimalkan gradien fungsi kerugian (misalnya, *Mean Squared Error*) menggunakan proses iteratif. Ilustrasi dari cara kerja GradienBoostingRegressor ditunjukan pada Gambar 5.
+
+     ![](https://afandistudio.net/prak_ai/GradienRegression.png)
+
+     <div style="text-align:center">Gambar 5. Ilustrasi GradienBoostingRegressor [5]</div>
 
 5. Menambahkan parameter tunning untuk mengingkatkan performa model
 
    Penambahan parameter menggunakan **Teknik Grid Search**. Sehingga diperoleh hyperparameter dari masing-masing algoritma adalah sebagai berikut.
 
-   - Parameter GradienBoostingRegressor
-   
-     - n_estimator = 90
-     - max_depth = 5
-     - min_samples_split = 10
-     - min_samples_leaf = 4
-     - max_features = 4
-     
    - Parameter RandomForestRegressor
    
      - n_estimator = 90
-   - max_samples = 0.4
-     - max_features = 0.5
-   
-   - Parameter BaggingRegressor
-
-     - n_estimators = 70
-     - max_features = 0.7
+     - max_features = 0.4
      - max_samples = 0.6
-  - warm_start= False
-     - oob_score = False
-  - bootstrap = False
-    
+   - Parameter ExtraTreeRegressor
+   
+     - criterion = mse
+     - max_depth = 32
+     - max_features = auto
+     - max_samples_leaf = 1
+     - max_samples_split = 2
+     - n_estimators = 10
+     - warn_start = True
+   - Parameter GradienBoostingRegressor
 
+     - n_estimator = 200
+     - max_depth = 4
+     - min_samples_split = 10
+     - min_samples_leaf = 5
+     - max_features = 3
 
 ## Evaluation
 
@@ -253,6 +250,8 @@ Pada tahap ini dilakukan proses pelatihan untuk mendapatkan model dengan perform
   - yi = *Actual Value* / Nilai Sebenarnya
   - ŷi = *Predicted Value* / Nilai Prediksi
 
+  
+  
 - RMSE adalah jumlah dari kesalahan kuadrat atau selisih antara nilai sebenarnya dengan nilai prediksi yang telah ditentukan. Cara menghitungnya tinggal mengakar kan mse menggunakan fungsi *np.sqrt*. Rumus dari RMSE adalah sebagai berikut.
   $$
   RMSE = \sqrt{(\frac{1}{n})\sum_{i=1}^{n}(y_{i} - x_{i})^{2}}
@@ -263,6 +262,8 @@ Pada tahap ini dilakukan proses pelatihan untuk mendapatkan model dengan perform
   - yi = *Actual Value* / Nilai Sebenarnya
   - ŷi = *Predicted Value* / Nilai Prediksi
 
+  
+  
 - R2 Score dijadikan sebagai pengukuran seberapa baik garis regresi mendekati nilai data asli yang dibuat melalui model. Rumus dari R2 Score adalah sebagai berikut.
   $$
   R^2 = 1 - {SS_R \over SS_T} =  1 - {\sum_{i} (y_i - ŷ_p) ^ 2 \over \sum_{i} (y_i - ȳ) ^ 2}
@@ -271,15 +272,19 @@ Pada tahap ini dilakukan proses pelatihan untuk mendapatkan model dengan perform
   - SSR : Kuadrat dari selisih nilai Y prediksi dengan nilai rata-rata Y = ∑ (Ypred – Yrata-rata)²
   - SST : Kuadrat dari selisih nilai Y aktual dengan nilai rata-rata Y = ∑ (Yaktual – Yrata-rata)²
 
-- Setelah melalui tahap pelatihan dan evaluasi menggunakan MSE, RMSE, dan R Square, diperoleh hasil bahwa algoritma **GradienBoosterRegressor** memiliki performa yang paling baik seperti ditunjukan Tabel 3. Maksud performa yang paling baik adalah memiliki nilai MSE dan RMSE yang mendekati nilai 0, serta memiliki nilai R2 Score yang mendekati nilai 1.
+  
+  
+- Setelah melalui tahap pelatihan dan evaluasi menggunakan MSE, RMSE, dan R Square, diperoleh hasil bahwa algoritma **RandomForestRegressor** memiliki performa yang paling baik seperti ditunjukan Tabel 3. Maksud performa yang paling baik adalah memiliki nilai MSE dan RMSE yang mendekati nilai 0, serta memiliki nilai R2 Score yang mendekati nilai 1.
 
   <div style="text-align:center">Tabel 3. Hasil Pengujian dari 3 Algoritma Teratas</div>
 
-  | id   | Model_Name       | MSE       | R2 Score  | RMSE      |
-  | ---- | ---------------- | --------- | --------- | --------- |
-  | 0    | GradienBoosting  | 0.1588188 | 0.7238088 | 0.3985208 |
-  | 1    | RandomForest     | 0.1639016 | 0.7149698 | 0.4048476 |
-  | 2    | BaggingRegressor | 0.1595067 | 0.7226127 | 0.3993828 |
+  | id   | Model_Name                | MSE       | R2 Score  | RMSE      |
+  | ---- | ------------------------- | --------- | --------- | --------- |
+  | 0    | RandomForestRegressor     | 0.1288363 | 0.7828588 | 0.3589377 |
+  | 1    | ExtraTreesRegressor       | 0.1263014 | 0.7871310 | 0.3553891 |
+  | 2    | GradientBoostingRegressor | 0.2313675 | 0.6100523 | 0.4810067 |
+
+  
 
 - Membandingkan data sebenarnya dengan hasil prediksi. Hasil perbandingan dapat dilihat pada Tabel 4.
 
@@ -287,23 +292,23 @@ Pada tahap ini dilakukan proses pelatihan untuk mendapatkan model dengan perform
   
   | Id   | y_true     | prediksi_GB | prediksi_RF | prediksi_BG |
   | :--- | :--------- | :---------- | :---------- | :---------- |
-  | 965  | 13.6112660 | 13.9000000  | 13.9000000  | 14.0000000  |
-  | 657  | 13.4294333 | 13.6000000  | 13.6000000  | 13.7000000  |
-  | 1002 | 13.7166489 | 13.5000000  | 13.4000000  | 13.4000000  |
-  | 918  | 13.2056893 | 13.7000000  | 13.7000000  | 13.8000000  |
-  | 798  | 14.3035242 | 13.9000000  | 14.0000000  | 14.0000000  |
+  | 79   | 12.5793451 | 12.4000000  | 12.4000000  | 12.3000000  |
+  | 101  | 10.9594359 | 11.5000000  | 11.5000000  | 11.5000000  |
+  | 271  | 11.5038999 | 11.5000000  | 11.5000000  | 11.5000000  |
+  | 225  | 11.6393378 | 12.0000000  | 12.0000000  | 12.0000000  |
+  | 466  | 13.2079537 | 13.1000000  | 13.1000000  | 13.0000000  |
   | ...  | ...        | ...         | ...         | ...         |
-  | 53   | 15.1153689 | 14.9000000  | 15.0000000  | 15.0000000  |
-  | 1027 | 13.5657933 | 13.8000000  | 13.8000000  | 14.0000000  |
-  | 436  | 14.1867278 | 13.3000000  | 13.3000000  | 13.3000000  |
-  | 161  | 14.9745150 | 15.9000000  | 15.9000000  | 15.8000000  |
-  | 47   | 15.2850487 | 14.9000000  | 15.1000000  | 14.9000000  |
+  | 240  | 12.6924877 | 12.4000000  | 12.4000000  | 12.3000000  |
+  | 429  | 12.6301174 | 12.4000000  | 12.4000000  | 12.3000000  |
+  | 169  | 11.6912976 | 12.4000000  | 12.4000000  | 12.3000000  |
+  | 381  | 12.5948493 | 12.3000000  | 12.3000000  | 12.2000000  |
+  | 60   | 11.8757266 | 12.4000000  | 12.4000000  | 12.3000000  |
 
 ## Conclussion
 
-1. Berdasarkan hasil pengukuran, terdapat 10 kolom atau fitur yang mempengaruhi *Price* yaitu Brand, Battery, Screen_Size, Processor, RAM, Internal_Storage, Rear_Camera, Front_Camera, OS, dan PPI.
-2. Proses preprocessing yang dilakukan adalah dengan melakukan manipulasi data seperti mengabungkan Resolution X dan Resolution Y untuk menghasilkan fitur baru yaitu PPI. Menghapus data yang tidak memiliki korelasi yang signifikan dengan *Price*, dan mengubah format tipe data pada setiap kolom yang memiliki korelasi.
-3. Berdasarkan hasil pengujian model, diperoleh hasil bahwa algoritma GradienBoosting memiliki performa yang paling baik yaitu memiliki nilai RMSE paling kecil dan R2 Score paling besar.
+1. Berdasarkan hasil pengukuran, terdapat 9 kolom atau fitur yang mempengaruhi *Price* yaitu Brand, Model, Water Resistance, Case Diameter, Case Diameter, Band Width, Dial Color, Crystal Material, dan Crystal Material.
+2. Proses preprocessing yang dilakukan adalah dengan melakukan manipulasi data seperti menghapus data yang tidak memiliki korelasi yang signifikan dengan *Price* dan mengubah format tipe data pada setiap kolom yang memiliki korelasi.
+3. Berdasarkan hasil pengujian model, diperoleh hasil bahwa algoritma RandomForestRegressor memiliki performa yang paling baik yaitu memiliki nilai RMSE paling kecil dan R2 Score paling besar.
 4. Meningkatkan performa model dapat dilakukan dengan menambahkan hyperparameter.  Pemilihan hyperparameter yang menghasilkan performa terbaik dapat dilakukan menggunakan teknik Grid Search.
 5. Dataset yang digunakan memiliki rentang jangkauan yang berbeda (imbalace), oleh sebab itu agar performa model lebih baik maka perlu dilakukan teknik SMOTE untuk menangani imbalance dataset.
 
